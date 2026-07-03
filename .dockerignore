@@ -1,0 +1,13 @@
+t/
+results/
+__pycache__/
+*.pyc
+.git/
+.gitignore
+*.csv
+*.parquet
+tests/
+diag.py
+diago.txt
+_analyze_quotes.py
+makefile.py

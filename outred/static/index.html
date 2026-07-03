@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outred  - Outlier Detection Engine</title>
+    <meta name="description" content="Upload a CSV and detect anomalies instantly. Choose between private browser processing or powerful server-side analysis with 5+ algorithms.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" type="image/svg+xml" href="/static/images/logo.svg">
+</head>
+<body>
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!-- HEADER                                                             -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <header id="app-header">
+        <div class="header-inner">
+            <div class="logo">
+                <img src="/static/images/logo.svg" alt="Outred" class="logo-img" width="56" height="56">
+            </div>
+            <nav class="header-nav">
+                <span class="nav-badge" id="mode-badge">Browser Mode</span>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!-- MAIN WIZARD                                                        -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <main id="app-main">
+
+        <!-- Step indicator -->
+        <div class="step-indicator" id="step-indicator">
+            <div class="step active" data-step="1">
+                <div class="step-number">1</div>
+                <div class="step-label">Upload</div>
+            </div>
+            <div class="step-line"></div>
+            <div class="step" data-step="2">
+                <div class="step-number">2</div>
+                <div class="step-label">Configure</div>
+            </div>
+            <div class="step-line"></div>
+            <div class="step" data-step="3">
+                <div class="step-number">3</div>
+                <div class="step-label">Results</div>
+            </div>
+        </div>
+
+        <!-- ─────────────────────── STEP 1: UPLOAD ───────────────────── -->
+        <section class="wizard-panel" id="step-1-panel">
+            <h1>Detect Outliers in Your Data</h1>
+            <p class="subtitle">Upload a CSV file to find anomalous rows using machine learning.</p>
+
+            <!-- Processing mode toggle -->
+            <div class="mode-toggle" id="mode-toggle">
+                <button class="mode-btn active" id="btn-browser-mode" data-mode="browser" aria-label="Browser processing mode">
+                    <span class="mode-title">Browser Processing</span>
+                    <span class="mode-desc">Data never leaves your device. Maximum privacy. Best for sensitive files under 5MB.</span>
+                </button>
+                <button class="mode-btn" id="btn-server-mode" data-mode="server" aria-label="Server processing mode">
+                    <span class="mode-title">Server Processing</span>
+                    <span class="mode-desc">5 algorithms + SHAP explanations. Handles large files up to 1GB. Data deleted after processing.</span>
+                </button>
+            </div>
+
+            <!-- Privacy notice -->
+            <div class="privacy-notice" id="privacy-notice">
+                <span id="privacy-text">Your data is processed entirely in your browser. Nothing is uploaded.</span>
+            </div>
+
+            <!-- File drop zone -->
+            <div class="drop-zone" id="drop-zone" tabindex="0" role="button" aria-label="Upload CSV file">
+                <div class="drop-zone-content">
+                    <div class="drop-text">Drag & drop a CSV file here</div>
+                    <div class="drop-subtext">or click to browse</div>
+                </div>
+                <input type="file" id="file-input" accept=".csv" hidden aria-hidden="true">
+            </div>
+
+            <!-- File info (shown after selection) -->
+            <div class="file-info hidden" id="file-info">
+                <div class="file-info-name" id="file-info-name"></div>
+                <div class="file-info-size" id="file-info-size"></div>
+                <button class="btn-secondary" id="btn-change-file" aria-label="Change file">Change file</button>
+            </div>
+
+            <button class="btn-primary hidden" id="btn-to-step-2" aria-label="Continue to configuration">
+                Continue →
+            </button>
+        </section>
+
+        <!-- ─────────────────── STEP 2: CONFIGURE ────────────────────── -->
+        <section class="wizard-panel hidden" id="step-2-panel">
+            <h2>Configure Detection</h2>
+
+            <!-- Data profile card (server mode only) -->
+            <div class="profile-card hidden" id="profile-card">
+                <h3>Data Profile</h3>
+                <div class="profile-grid" id="profile-grid"></div>
+            </div>
+
+            <div class="config-form">
+                <div class="config-group">
+                    <label for="sensitivity-slider">Expected Outlier Percentage</label>
+                    <p class="config-hint">What percentage of your data do you expect to be unusual?</p>
+                    <div class="slider-row">
+                        <input type="range" id="sensitivity-slider" min="0.5" max="20" step="0.5" value="5"
+                               aria-label="Expected outlier percentage">
+                        <span class="slider-value" id="sensitivity-value">5%</span>
+                    </div>
+                </div>
+
+                <!-- Server-only options -->
+                <div class="server-options" id="server-options">
+                    <div class="config-group">
+                        <label for="algorithm-select">Algorithm</label>
+                        <select id="algorithm-select" aria-label="Detection algorithm">
+                            <option value="auto" selected>Auto-Select (Recommended)</option>
+                            <option value="ensemble">Ensemble (IForest + HBOS + LOF)</option>
+                            <option value="iforest">Isolation Forest</option>
+                            <option value="hbos">Histogram-Based (HBOS)  - Fastest</option>
+                            <option value="lof">Local Outlier Factor (LOF)</option>
+                            <option value="cblof">Clustering-Based (CBLOF)</option>
+                            <option value="ocsvm">One-Class SVM</option>
+                        </select>
+                    </div>
+
+                    <div class="config-group">
+                        <label for="scaling-select">Feature Scaling</label>
+                        <select id="scaling-select" aria-label="Feature scaling method">
+                            <option value="robust" selected>Robust (Recommended)</option>
+                            <option value="standard">Standard (Z-score)</option>
+                            <option value="minmax">Min-Max (0–1)</option>
+                            <option value="none">None</option>
+                        </select>
+                    </div>
+
+                    <div class="config-group">
+                        <label for="impute-select">Missing Value Handling</label>
+                        <select id="impute-select" aria-label="Missing value strategy">
+                            <option value="median" selected>Fill with Median (Recommended)</option>
+                            <option value="mean">Fill with Mean</option>
+                            <option value="zero">Fill with Zero</option>
+                            <option value="drop">Drop Rows with Nulls</option>
+                        </select>
+                    </div>
+
+                    <div class="config-group">
+                        <label>SHAP Explanations</label>
+                        <p class="config-hint">Show which features drove each outlier's anomaly score. Adds ~10s of processing time.</p>
+                        <label class="explain-toggle" for="explain-toggle" aria-label="Enable SHAP explanations">
+                            <input type="checkbox" id="explain-toggle">
+                            <span class="explain-slider"></span>
+                            <span class="explain-label">Enable explanations</span>
+                        </label>
+                    </div>
+
+                    <!-- Advanced Settings (collapsible) -->
+                    <details class="advanced-settings" id="advanced-settings">
+                        <summary class="advanced-toggle"> Advanced Settings</summary>
+                        <div class="advanced-grid">
+                            <!-- Categorical Detection -->
+                            <h4 class="advanced-section-title">Categorical Detection</h4>
+
+                            <div class="config-group config-group-compact">
+                                <label for="adv-cat-threshold">Rare Category Threshold</label>
+                                <p class="config-hint">Categories appearing in fewer than this fraction of rows are flagged. Lower = fewer false positives on diverse data.</p>
+                                <input type="number" id="adv-cat-threshold" value="0.01" min="0.001" max="0.50" step="0.005">
+                            </div>
+
+                            <div class="config-group config-group-compact">
+                                <label for="adv-cat-max-cardinality">Max Cardinality Ratio</label>
+                                <p class="config-hint">Skip columns with unique/total values above this ratio (names, addresses aren't real categories).</p>
+                                <input type="number" id="adv-cat-max-cardinality" value="0.10" min="0.01" max="1.0" step="0.01">
+                            </div>
+
+                            <div class="config-group config-group-compact">
+                                <label for="adv-cat-min-cardinality">Min Cardinality Floor</label>
+                                <p class="config-hint">Minimum unique values before the cardinality check applies.</p>
+                                <input type="number" id="adv-cat-min-cardinality" value="10" min="1" max="10000" step="1">
+                            </div>
+
+                            <!-- Profiling -->
+                            <h4 class="advanced-section-title">Profiling</h4>
+
+                            <div class="config-group config-group-compact">
+                                <label for="adv-id-cardinality">ID Detection Ratio</label>
+                                <p class="config-hint">Auto-exclude string columns with unique/sample above this ratio as IDs.</p>
+                                <input type="number" id="adv-id-cardinality" value="0.50" min="0.10" max="1.0" step="0.05">
+                            </div>
+
+                            <div class="config-group config-group-compact">
+                                <label for="adv-numeric-cast">Numeric Cast Threshold</label>
+                                <p class="config-hint">Fraction of parseable values to cast a string column to numeric.</p>
+                                <input type="number" id="adv-numeric-cast" value="0.80" min="0.50" max="1.0" step="0.05">
+                            </div>
+
+                            <div class="config-group config-group-compact">
+                                <label for="adv-sample-rows">Profiler Sample Rows</label>
+                                <p class="config-hint">Rows sampled for profiling. Larger = more accurate but slower.</p>
+                                <input type="number" id="adv-sample-rows" value="1000" min="100" max="100000" step="100">
+                            </div>
+
+                            <!-- Routing -->
+                            <h4 class="advanced-section-title">Auto-Routing Thresholds</h4>
+
+                            <div class="config-group config-group-compact">
+                                <label for="adv-route-incremental-mb">Incremental Engine (MB)</label>
+                                <p class="config-hint">File size above which the incremental streaming engine is used.</p>
+                                <input type="number" id="adv-route-incremental-mb" value="500" min="50" max="10000" step="50">
+                            </div>
+
+                            <div class="config-group config-group-compact">
+                                <label for="adv-route-hbos-rows">HBOS Row Threshold</label>
+                                <p class="config-hint">Row count above which HBOS (fastest algorithm) is auto-selected.</p>
+                                <input type="number" id="adv-route-hbos-rows" value="1000000" min="10000" max="100000000" step="100000">
+                            </div>
+
+                            <div class="config-group config-group-compact">
+                                <label for="adv-route-high-dims">High Dimension Threshold</label>
+                                <p class="config-hint">Numeric columns above which IForest is preferred.</p>
+                                <input type="number" id="adv-route-high-dims" value="50" min="5" max="1000" step="5">
+                            </div>
+
+                            <div class="config-group config-group-compact">
+                                <label for="adv-route-skewness">Skewness Threshold</label>
+                                <p class="config-hint">Average |skewness| above which LOF is auto-selected.</p>
+                                <input type="number" id="adv-route-skewness" value="5.0" min="1.0" max="20.0" step="0.5">
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <div class="btn-row">
+                <button class="btn-secondary" id="btn-back-to-1" aria-label="Go back to upload">← Back</button>
+                <button class="btn-primary" id="btn-run-analysis" aria-label="Start analysis">
+                    Run Analysis
+                </button>
+            </div>
+        </section>
+
+        <!-- ──────────────── STEP 3: LOADING / RESULTS ───────────────── -->
+        <section class="wizard-panel hidden" id="step-3-panel">
+
+            <!-- Loading state -->
+            <div id="loading-state">
+                <div class="loader-ring"></div>
+                <p class="loading-text" id="loading-text">Analyzing your data...</p>
+            </div>
+
+            <!-- Validation error state -->
+            <div class="hidden" id="validation-error-state">
+                <div class="validation-error-header">
+                    <h2>CSV Validation Failed</h2>
+                    <p class="validation-error-subtitle" id="validation-error-subtitle"></p>
+                </div>
+                <div class="validation-issues-list" id="validation-issues-list"></div>
+                <div class="btn-row" style="margin-top:1.5rem">
+                    <button class="btn-primary" id="btn-download-validation" aria-label="Download validation report">Download Error Report</button>
+                    <button class="btn-secondary" id="btn-validation-retry" aria-label="Start over">Start Over</button>
+                </div>
+            </div>
+
+            <!-- Results state -->
+            <div class="hidden" id="results-state">
+                <h2>Analysis Complete</h2>
+
+                <!-- Summary cards -->
+                <div class="summary-cards" id="summary-cards">
+                    <div class="summary-card">
+                        <div class="card-label">Rows Scanned</div>
+                        <div class="card-value" id="card-total-rows">—</div>
+                    </div>
+                    <div class="summary-card card-warning">
+                        <div class="card-label">Outliers Found</div>
+                        <div class="card-value" id="card-outlier-count">—</div>
+                        <div class="card-sub" id="card-outlier-pct"></div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="card-label">Numeric Outliers</div>
+                        <div class="card-value" id="card-numeric">—</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="card-label">Categorical Outliers</div>
+                        <div class="card-value" id="card-categorical">—</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="card-label">Runtime</div>
+                        <div class="card-value" id="card-runtime">—</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="card-label">Algorithm Used</div>
+                        <div class="card-value card-value-sm" id="card-algorithm">—</div>
+                    </div>
+                </div>
+
+                <!-- Histogram -->
+                <div class="chart-container" id="chart-container">
+                    <h3>Anomaly Score Distribution</h3>
+                    <canvas id="score-histogram" width="700" height="250" aria-label="Histogram of anomaly scores"></canvas>
+                </div>
+
+                <!-- SHAP Explanations panel -->
+                <div class="explanations-container hidden" id="explanations-container">
+                    <h3>Why These Rows Are Outliers <span class="table-count" id="explanations-count"></span></h3>
+                    <p class="explanations-subtitle">Top features that contributed most to each row's anomaly score.</p>
+                    <div class="explanations-list" id="explanations-list"></div>
+                </div>
+
+                <!-- Outlier table -->
+                <div class="table-container" id="table-container">
+                    <h3>Flagged Outlier Rows <span class="table-count" id="table-count"></span></h3>
+                    <div class="table-scroll">
+                        <table id="outlier-table" aria-label="Outlier rows">
+                            <thead id="outlier-thead"></thead>
+                            <tbody id="outlier-tbody"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Download -->
+                <div class="btn-row">
+                    <button class="btn-secondary" id="btn-download-csv" aria-label="Download results as CSV">
+                        Download CSV
+                    </button>
+                    <button class="btn-secondary" id="btn-new-analysis" aria-label="Start new analysis">
+                        New Analysis
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- FOOTER                                                             -->
+    <footer id="app-footer">
+        <p>Outred v1  - Outlier Detection Engine · Ephemeral Processing · Zero Data Retention</p>
+    </footer>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

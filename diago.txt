@@ -1,0 +1,1845 @@
+
+Line 68668
+  - Odd quote count (11)
+"ASSAM","GOALPARA","LAKHIPUR","PUKHURIPARA","GHUNGHUNIVITA","MAIN GHUNGHUNIRBH
+
+Line 68669
+  - Field 0 contains stray "
+  - Field 0 ends with literal "
+  - Odd quote count (21)
+MAIN GHUNGHUNIRBHITA","0","153","0","0","153","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 68721
+  - Odd quote count (11)
+"ASSAM","GOALPARA","LAKHIPUR","DADAN","KURUNG","KURUNG
+
+Line 68722
+  - Field 0 contains stray "
+  - Field 0 ends with literal "
+  - Odd quote count (21)
+KURUNG","50","244","162","0","0","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 68794
+  - Odd quote count (11)
+"ASSAM","GOALPARA","LAKHIPUR","BAPURBHITA JURIGAON","JURIGAON","JURIGAON
+
+Line 68795
+  - Field 0 contains stray "
+  - Field 0 ends with literal "
+  - Odd quote count (21)
+JURIGAON","0","0","376","0","0","250","Partially Covered","NO","NO","01_04_2009"
+
+Line 69081
+  - Odd quote count (11)
+"ASSAM","GOALPARA","KUSHDHWA","LELA","LELA","LELA
+
+Line 69082
+  - Field 0 contains stray "
+  - Field 0 ends with literal "
+  - Odd quote count (21)
+LELA","0","475","0","0","250","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 138497
+  - Odd quote count (11)
+"BIHAR","PATNA","MOKAMEH","HANTHI DAH","HATHDEH","HANTHI DAH
+
+Line 138498
+  - Field 0 contains stray "
+  - Field 0 ends with literal "
+  - Odd quote count (21)
+HANTHI DAH","1777","0","3144","250","0","250","Partially Covered","NO","NO","01_04_2009"
+
+Line 143433
+  - Odd quote count (11)
+"BIHAR","ROHTAS","KARGAHAR","SENDUWAR","CHANDARBHANPUR","CHANDRABHANPUR
+
+Line 143434
+  - Field 0 contains stray "
+  - Field 0 ends with literal "
+  - Odd quote count (21)
+CHANDRABHANPUR","221","0","754","221","0","500","Partially Covered","NO","NO","01_04_2009"
+
+Line 153758
+  - Odd quote count (11)
+"BIHAR","GAYA","NEEM CHAK BATHANI","MANIYARA","MORABBI CHAK","MORABICHAK
+
+Line 153759
+  - Field 0 contains stray "
+  - Field 0 ends with literal "
+  - Odd quote count (21)
+MORABICHAK","687","0","1337","500","0","500","Partially Covered","NO","NO","01_04_2009"
+
+Line 267219
+  - Odd quote count (11)
+"GUJARAT","VALSAD","DHARAMPUR","MURDAD","MURDAD","MOTA FALIA
+
+Line 267220
+  - Field 0 contains stray "
+  - Field 0 ends with literal "
+  - Odd quote count (21)
+MOHVADI","0","125","0","0","125","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 278425
+  - Odd quote count (9)
+"HARYANA","SONIPAT","KATHURA","CHHICHRANA","CHHICHRANA
+
+Line 278427
+  - Field 0 contains stray "
+  - Field 0 ends with literal "
+CHHICHRANA","CHHICHRANA
+
+Line 278429
+  - Field 0 contains stray "
+  - Field 0 ends with literal "
+  - Odd quote count (21)
+CHHICHRANA","1084","0","3230","150","0","300","Partially Covered","NO","NO","01_04_2009"
+
+Line 311638
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"HIMACHAL PRADESH","MANDI","Karsog","CHOURIDHAR","Jachh "B"","Jachh "B" Holla","0","0","1","0","0","1","Fully Covered","NO","NO","01_04_2009"
+
+Line 311639
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"HIMACHAL PRADESH","MANDI","Karsog","CHOURIDHAR","Jachh "B"","Jaglot","0","0","2","0","0","2","Fully Covered","NO","NO","01_04_2009"
+
+Line 311640
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"HIMACHAL PRADESH","MANDI","Karsog","CHOURIDHAR","Jachh "B"","Panvishaw","2","0","0","2","0","0","Fully Covered","YES","NO","01_04_2009"
+
+Line 335158
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"JAMMU AND KASHMIR","KUPWARA","SOGAM","DIVER "A"","DIVER ANDERBUGH","DIVER ANDERBUGH","0","0","4000","0","0","2000","Partially Covered","NO","NO","01_04_2009"
+
+Line 335159
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"JAMMU AND KASHMIR","KUPWARA","SOGAM","DIVER "A"","DIVER ANDERBUGH","KABAD PATTI","0","13","500","0","0","0","Partially Covered","NO","NO","01_04_2009"
+
+Line 335160
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"JAMMU AND KASHMIR","KUPWARA","SOGAM","DIVER "B"","DIVER "B"","DIVER "B"","0","779","2381","0","0","0","Partially Covered","NO","NO","01_04_2009"
+
+Line 335161
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"JAMMU AND KASHMIR","KUPWARA","SOGAM","DIVER "B"","DIVER "B"","MARGI DIVER","0","100","0","0","0","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 335230
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"JAMMU AND KASHMIR","KUPWARA","KRALPORA","LONE HARI","LONE HARI","TAGWAD "B"","0","102","328","0","0","0","Partially Covered","NO","NO","01_04_2009"
+
+Line 335244
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"JAMMU AND KASHMIR","KUPWARA","KRALPORA","DARDPORA","DARDPORA","DARDPORA  "A"","0","1497","3200","0","0","0","Partially Covered","NO","NO","01_04_2009"
+
+Line 335245
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"JAMMU AND KASHMIR","KUPWARA","KRALPORA","DARDPORA","DARDPORA","DARDPORA "B"","0","1497","2214","0","0","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 336672
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"JAMMU AND KASHMIR","SRINAGAR","GANDERBAL","GANDERBAL","GANDERBAL","SALOORA "A"","0","0","2248","0","0","2248","Fully Covered","NO","NO","01_04_2009"
+
+Line 336673
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"JAMMU AND KASHMIR","SRINAGAR","GANDERBAL","GANDERBAL","GANDERBAL","SALOORA "B"","0","0","2380","0","0","1800","Partially Covered","NO","NO","01_04_2009"
+
+Line 363199
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"KARNATAKA","YADGIR","SHORAPUR","HEBBAL(B)","SIDDAPUR "B"","SIDDAPUR -B","54","847","340","27","619","229","Partially Covered","NO","YES","01_04_2009"
+
+Line 372638
+  - Mixed single/double quotes
+"KARNATAKA","MYSORE","HEGGADADEVANKOTE","HIREHALLI","HIREHALLI","HIREHALLI '' A ''","352","750","303","352","750","303","Partially Covered","NO","YES","01_04_2009"
+
+Line 372643
+  - Mixed single/double quotes
+"KARNATAKA","MYSORE","HEGGADADEVANKOTE","HIREHALLI","PENJAHALLI","HIREHALLI '' B ''","0","0","2","0","0","2","Fully Covered","NO","NO","01_04_2009"
+
+Line 372705
+  - Mixed single/double quotes
+"KARNATAKA","MYSORE","HEGGADADEVANKOTE","SAVVE","SAVVE","SAVVE BELATHURU ''A''","0","185","0","0","72","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 372706
+  - Mixed single/double quotes
+"KARNATAKA","MYSORE","HEGGADADEVANKOTE","SAVVE","SAVVE","SAVVE BELATHURU ''B''","0","189","0","0","76","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 387970
+  - Odd quote count (11)
+"KARNATAKA","UTTAR KANNADA","SIDDAPUR","SOVINKOPPA","CHAPPARAMANE","JATAK
+
+Line 387971
+  - Field 0 contains stray "
+  - Field 0 ends with literal "
+  - Odd quote count (21)
+ATAK","0","0","20","0","0","20","Fully Covered","NO","NO","01_04_2009"
+
+Line 478768
+  - Mixed single/double quotes
+"MADHYA PRADESH","DHAR","GANDHWANI","DEDLI 'K'","DEDLI 'K'","PATELPURA","0","136","100","0","36","100","Partially Covered","NO","YES","01_04_2009"
+
+Line 478769
+  - Mixed single/double quotes
+"MADHYA PRADESH","DHAR","GANDHWANI","DEDLI 'K'","DEDLI 'K'","SINGADPURA","0","325","0","0","300","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 478770
+  - Mixed single/double quotes
+"MADHYA PRADESH","DHAR","GANDHWANI","DEDLI 'K'","DEDLI 'K'","SCHOOLPURA","0","385","117","0","285","100","Partially Covered","NO","YES","01_04_2009"
+
+Line 478771
+  - Mixed single/double quotes
+"MADHYA PRADESH","DHAR","GANDHWANI","DEDLI 'K'","VIRPUR (BALWARI)","SCHOOLPURA","0","90","0","0","80","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 478772
+  - Mixed single/double quotes
+"MADHYA PRADESH","DHAR","GANDHWANI","DEDLI 'K'","VIRPUR (BALWARI)","TEMRIPURA","0","320","0","0","320","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 478773
+  - Mixed single/double quotes
+"MADHYA PRADESH","DHAR","GANDHWANI","DEDLI 'K'","VIRPUR (BALWARI)","TADVIPURA","0","191","0","0","191","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 478774
+  - Mixed single/double quotes
+"MADHYA PRADESH","DHAR","GANDHWANI","DEDLI 'K'","VIRPUR (BALWARI)","AMLIYAPANI","0","50","0","0","0","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 478775
+  - Mixed single/double quotes
+"MADHYA PRADESH","DHAR","GANDHWANI","DEDLI 'K'","VIRPUR (BALWARI)","MAWALIPURA","0","241","0","0","241","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 479248
+  - Mixed single/double quotes
+"MADHYA PRADESH","DHAR","GANDHWANI","DEDLI 'B'","DEDLI 'B'","PATELPURA","0","650","0","0","548","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 479249
+  - Mixed single/double quotes
+"MADHYA PRADESH","DHAR","GANDHWANI","DEDLI 'B'","DEDLI 'B'","TADWIPURA","0","119","2","0","100","2","Partially Covered","NO","YES","01_04_2009"
+
+Line 479250
+  - Mixed single/double quotes
+"MADHYA PRADESH","DHAR","GANDHWANI","DEDLI 'B'","DEDLI 'B'","NIGWALPURA","0","225","0","0","140","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 479251
+  - Mixed single/double quotes
+"MADHYA PRADESH","DHAR","GANDHWANI","DEDLI 'B'","DEDLI 'B'","SOLIAPURA","0","105","0","0","40","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 479252
+  - Mixed single/double quotes
+"MADHYA PRADESH","DHAR","GANDHWANI","DEDLI 'B'","DEDLI 'B'","BEDIPURA","0","65","0","0","40","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 513582
+  - Odd quote count (11)
+"MADHYA PRADESH","CHHINDWARA","CHHINDWARA","LONIYAMARU","DHANORI GUSAI","DHANORAGOSAI
+
+Line 513583
+  - Field 0 contains stray "
+  - Field 0 ends with literal "
+  - Odd quote count (21)
+DHANORAGOSAI","26","216","290","8","68","90","Partially Covered","NO","YES","01_04_2009"
+
+Line 610916
+  - Odd quote count (11)
+"MEGHALAYA","EAST KHASI HILLS","MYLLIEM","MAWEITNAR","MAWEITNAR","MAWEITNAR
+
+Line 610917
+  - Field 0 contains stray "
+  - Field 0 ends with literal "
+  - Odd quote count (21)
+MAWEITNAR","0","288","0","0","288","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 618270
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"MEGHALAYA","RI BHOI","UMLING","MAWLONG"A"","MAWLONG"A"","MAWLONG - A","0","302","0","0","302","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 618271
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"MEGHALAYA","RI BHOI","UMLING","MAWLONG"A"","MAWLONG"A"","NONGTHYMMAI","0","186","0","0","186","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 618272
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"MEGHALAYA","RI BHOI","UMLING","MAWLONG"A"","MAWLONG"A"","UMTERLEN","0","163","0","0","163","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 618401
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"MEGHALAYA","RI BHOI","UMLING","GAMBALBARI "A"","GAMBALBARI "A"","GAMBALBARI - A","0","126","0","0","61","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 618402
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"MEGHALAYA","RI BHOI","UMLING","GAMBALBARI "B"","GAMBALBARI "B"","GAMBALBARI - B","0","119","0","0","119","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 618409
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"MEGHALAYA","RI BHOI","UMLING","UMDUBA "A"","UMDUBA "A"","UMDUBA - A","0","329","0","0","0","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 619850
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"MIZORAM","LAWNGTLAI","LAWNGTLAI","CHAMDUR "P" I","CHAMDUR "P" I","CHAMDUR P I","0","171","0","0","171","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 619851
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"MIZORAM","LAWNGTLAI","LAWNGTLAI","CHAMDUR P II","CHAMDUR "P" II","CHAMDUR P II","0","137","0","0","137","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 619904
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"MIZORAM","LAWNGTLAI","CHAWNGTE","BUNGKAWN S","BUNGKAWN "S"","BUNGKAWN S","0","155","0","0","133","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 620050
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"NAGALAND","PEREN","JALUKIE","JLK","Lilen "A" & "B"","Lilen "A" & "B"","0","662","10","0","662","10","Fully Covered","NO","YES","01_04_2009"
+
+Line 620369
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"NAGALAND","ZUNHEBOTO","SURUHOTO","SRHTO","Achikuchu "A"","Achikuchu "A"","0","532","0","0","532","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 620370
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"NAGALAND","ZUNHEBOTO","SURUHOTO","SRHTO","Achikuchu "B"","Achikuchu "B"","0","281","0","0","281","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 620374
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"NAGALAND","ZUNHEBOTO","SURUHOTO","SRHTO","Khumishi (b)","Khumishi "B"","0","545","1","0","545","1","Fully Covered","NO","YES","01_04_2009"
+
+Line 620649
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"NAGALAND","TUENSANG","NOKLAK","NLK","Panso "a"","Panso "A"","0","1722","4","0","1722","4","Fully Covered","NO","YES","01_04_2009"
+
+Line 620650
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"NAGALAND","TUENSANG","NOKLAK","NLK","Panso "b"","Panso "B"","0","2945","9","0","2945","9","Fully Covered","NO","YES","01_04_2009"
+
+Line 620714
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"NAGALAND","KIPHIRE","SHAMATOR","SMTR","Sikimi (Sukiur "B")","Sikimi (Sukiur "B"","0","300","0","0","300","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 620931
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"NAGALAND","DIMAPUR","NIULAND","NLD","Kiyezu "B"","Kiyezu "B"","0","741","0","0","0","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 620932
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"NAGALAND","DIMAPUR","NIULAND","NLD","Kiyezu "A"","Kiyezu "A"","0","680","0","0","0","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 620980
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"NAGALAND","DIMAPUR","MEDZIPHEMA","MED","Diphupar a","Diphupar "A"","0","5960","2347","0","5960","2347","Partially Covered","NO","YES","01_04_2009"
+
+Line 620981
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"NAGALAND","DIMAPUR","MEDZIPHEMA","MED","Diphupar b","Diphupar "B"","0","2852","239","0","2852","239","Partially Covered","NO","YES","01_04_2009"
+
+Line 621003
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"NAGALAND","DIMAPUR","MEDZIPHEMA","MED","Seithekema "A"","Seithekema "A"","0","540","191","0","540","191","Partially Covered","NO","YES","01_04_2009"
+
+Line 621017
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"NAGALAND","DIMAPUR","MEDZIPHEMA","MED","Bamunpukhri "A"","Bamunpukhri "A"","0","206","597","0","206","597","Partially Covered","NO","NO","01_04_2009"
+
+Line 621025
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"NAGALAND","DIMAPUR","MEDZIPHEMA","MED","Piphema "A" Station","Piphema "A" Station","0","762","180","0","0","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 621030
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"NAGALAND","DIMAPUR","MEDZIPHEMA","MED","Zuikhu "A" (Zuikhu)","Zuikhu "A" (Zuikhu)","0","1385","13","0","1385","13","Fully Covered","NO","YES","01_04_2009"
+
+Line 621033
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"NAGALAND","DIMAPUR","MEDZIPHEMA","MED","Hekheshe (Zuikhu "B")","Hekheshe (Zuikhu "B")","0","443","9","0","443","9","Partially Covered","NO","YES","01_04_2009"
+
+Line 621040
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"NAGALAND","DIMAPUR","MEDZIPHEMA","MED","New Chumukedima "A"","New Chumukedima "A"","0","424","0","0","424","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 621985
+  - Odd quote count (11)
+"ORISSA","SAMBALPUR","MANESWAR","DAKARA","JADULOISINGH","JADULOISINGH
+
+Line 621988
+  - Field 0 contains stray "
+  - Field 0 ends with literal "
+  - Odd quote count (21)
+JA","10","88","12","10","88","12","Fully Covered","NO","YES","01_04_2009"
+
+Line 646576
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"ORISSA","MAYURBHANJ","GOPABANDHUNAGAR","RANIBANDHA","SIALIA "A"","SIALIA "A"","0","269","0","0","269","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 646577
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"ORISSA","MAYURBHANJ","GOPABANDHUNAGAR","RANIBANDHA","SIALIA "A"","TUNGADHUA SAHI","0","40","0","0","40","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 646578
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"ORISSA","MAYURBHANJ","GOPABANDHUNAGAR","RANIBANDHA","SIALIA "A"","KARANJA SAHI","0","145","0","0","145","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 646579
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"ORISSA","MAYURBHANJ","GOPABANDHUNAGAR","RANIBANDHA","SIALIA "A"","ATNA SAHI","0","70","0","0","70","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 646580
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"ORISSA","MAYURBHANJ","GOPABANDHUNAGAR","RANIBANDHA","SIALIA "A"","BANA SAHI","0","70","0","0","70","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 646636
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"ORISSA","MAYURBHANJ","GOPABANDHUNAGAR","SAINKULA","SIRATHALI","KALIAPADA"A"","0","258","142","0","258","142","Fully Covered","NO","YES","01_04_2009"
+
+Line 646638
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"ORISSA","MAYURBHANJ","GOPABANDHUNAGAR","SAINKULA","SIRATHALI","KALIAPADA "B"","0","529","0","0","529","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 646641
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"ORISSA","MAYURBHANJ","GOPABANDHUNAGAR","SILAGHATI","SIALIA "B"","SIALIA "B"","0","260","0","0","260","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 646642
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"ORISSA","MAYURBHANJ","GOPABANDHUNAGAR","SILAGHATI","SIALIA "B"","DUNGURUDIHI","0","195","0","0","195","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 646643
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"ORISSA","MAYURBHANJ","GOPABANDHUNAGAR","SILAGHATI","SIALIA "B"","HUDI SAHI","0","381","0","0","381","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 673581
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Mixed single/double quotes
+"ORISSA","BALANGIR","AGALPUR","NAGAON'B'","Nagaon"B"","NAGAON-B","0","308","1417","0","308","1417","Fully Covered","NO","NO","01_04_2009"
+
+Line 673582
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Mixed single/double quotes
+"ORISSA","BALANGIR","AGALPUR","NAGAON'B'","Nagaon"B"","DASH PALLI","43","76","363","43","76","363","Fully Covered","NO","NO","01_04_2009"
+
+Line 673583
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Mixed single/double quotes
+"ORISSA","BALANGIR","AGALPUR","NAGAON'B'","Nagaon"B"","HARIJAN BASTI","305","0","0","305","0","0","Fully Covered","YES","NO","01_04_2009"
+
+Line 673584
+  - Mixed single/double quotes
+"ORISSA","BALANGIR","AGALPUR","NAGAON'B'","Santika","SANTIKA","225","9","943","58","9","540","Partially Covered","NO","NO","01_04_2009"
+
+Line 673585
+  - Mixed single/double quotes
+"ORISSA","BALANGIR","AGALPUR","NAGAON'B'","Santika","UPPER PADA","0","0","120","0","0","57","Partially Covered","NO","NO","01_04_2009"
+
+Line 673586
+  - Mixed single/double quotes
+"ORISSA","BALANGIR","AGALPUR","NAGAON'B'","Tentulikhunti","Tentelkhunti","37","254","516","25","111","210","Partially Covered","NO","NO","01_04_2009"
+
+Line 673607
+  - Mixed single/double quotes
+"ORISSA","BALANGIR","AGALPUR","NAGAON'A'","Gandapali","GAND PALLI","14","241","80","14","111","34","Partially Covered","NO","YES","01_04_2009"
+
+Line 673608
+  - Mixed single/double quotes
+"ORISSA","BALANGIR","AGALPUR","NAGAON'A'","TELENPALI","TELEN PALI","34","0","557","34","0","420","Partially Covered","NO","NO","01_04_2009"
+
+Line 673609
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Mixed single/double quotes
+"ORISSA","BALANGIR","AGALPUR","NAGAON'A'","Nagaon"A"","NAGAONA","205","138","1247","82","67","624","Partially Covered","NO","NO","01_04_2009"
+
+Line 673610
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Mixed single/double quotes
+"ORISSA","BALANGIR","AGALPUR","NAGAON'A'","Nagaon"A"","SANTI PADA","0","0","482","0","0","224","Partially Covered","NO","NO","01_04_2009"
+
+Line 673611
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Mixed single/double quotes
+"ORISSA","BALANGIR","AGALPUR","NAGAON'A'","Nagaon"A"","COLLEGE PARA","0","3","115","0","3","45","Partially Covered","NO","NO","01_04_2009"
+
+Line 673612
+  - Mixed single/double quotes
+"ORISSA","BALANGIR","AGALPUR","NAGAON'A'","Mundapali","Mundapali","138","54","500","138","54","500","Fully Covered","NO","NO","01_04_2009"
+
+Line 673613
+  - Mixed single/double quotes
+"ORISSA","BALANGIR","AGALPUR","NAGAON'A'","Kanthipali","KANTHE PALI","58","0","309","58","0","309","Fully Covered","NO","NO","01_04_2009"
+
+Line 673614
+  - Mixed single/double quotes
+"ORISSA","BALANGIR","AGALPUR","NAGAON'A'","Dudukamunda","DUDUKA MUNDA","14","219","549","14","119","244","Partially Covered","NO","NO","01_04_2009"
+
+Line 673616
+  - Mixed single/double quotes
+"ORISSA","BALANGIR","AGALPUR","NAGAON'A'","Baigankhari","NEW BASTI","163","43","707","78","43","366","Partially Covered","NO","NO","01_04_2009"
+
+Line 673617
+  - Mixed single/double quotes
+"ORISSA","BALANGIR","AGALPUR","NAGAON'A'","Ainlapali","AINLA PALLI","31","16","465","31","16","465","Fully Covered","NO","NO","01_04_2009"
+
+Line 673618
+  - Mixed single/double quotes
+"ORISSA","BALANGIR","AGALPUR","NAGAON'A'","Ainlapali","SCHOOL PARA","0","10","108","0","10","108","Fully Covered","NO","NO","01_04_2009"
+
+Line 673619
+  - Mixed single/double quotes
+"ORISSA","BALANGIR","AGALPUR","NAGAON'A'","Haladipadar","HALDI PADAR","91","44","450","91","44","450","Fully Covered","NO","NO","01_04_2009"
+
+Line 740829
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"ORISSA","GAJAPATI","MOHANA","KARACHABADI","KHAJURIPADA","KHAJURIPADA  " A "","0","125","14","0","125","14","Fully Covered","NO","YES","01_04_2009"
+
+Line 740831
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"ORISSA","GAJAPATI","MOHANA","KARACHABADI","KHAJURIPADA","KHAJURIPADA " B "","0","46","6","0","46","6","Fully Covered","NO","YES","01_04_2009"
+
+Line 742176
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"ORISSA","GAJAPATI","R. UDAYAGIRI","RAMAGIRI","THATARAJAKALONY","THATRAJ COLONY " B "","0","13","0","0","13","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 742325
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"ORISSA","GAJAPATI","R. UDAYAGIRI","MANGARAJPUR","BALIDI(B)","BALADI  " B "","3","232","0","3","232","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 742326
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"ORISSA","GAJAPATI","R. UDAYAGIRI","MANGARAJPUR","BALIDI(A)","BALADI " A "","0","166","0","0","100","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 742352
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"ORISSA","GAJAPATI","R. UDAYAGIRI","R UDAYAGIRI","ANTILI(A)","ANTARALI " A"","0","120","1","0","80","1","Partially Covered","NO","YES","01_04_2009"
+
+Line 742353
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"ORISSA","GAJAPATI","R. UDAYAGIRI","R UDAYAGIRI","ANTILI(B)","ANTARALI " B "","0","187","15","0","150","10","Partially Covered","NO","YES","01_04_2009"
+
+Line 756907
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"ORISSA","NABARANGAPUR","RAIGHAR","DEBAGAON","DEBAGAON","KARLAPADAR "A"","0","95","0","0","35","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 795197
+  - Odd quote count (11)
+"RAJASTHAN","SAWAI MADHOPUR","SAWAI MADHOPUR","SHIWAD","SHIWAR","BAGRIA DHANI
+
+Line 795198
+  - Field 0 contains stray "
+  - Field 0 ends with literal "
+  - Odd quote count (21)
+","0","0","234","0","0","234","Fully Covered","NO","NO","01_04_2009"
+
+Line 852527
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"RAJASTHAN","JALOR","JALOR","LETA","JALOR (B) (RURAL)","JALORE "B"","0","62","572","0","62","572","Partially Covered","NO","NO","01_04_2009"
+
+Line 853063
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"RAJASTHAN","JALOR","AHORE","GHANA","GHANA","MEENO KI DHANI " I "","0","48","0","0","48","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 853064
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"RAJASTHAN","JALOR","AHORE","GHANA","GHANA","MEENO KI DHANI "II"","0","85","0","0","85","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 853189
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"RAJASTHAN","JALOR","AHORE","DAYALPURA","DAYALPURA II","DAYAL PURA  "II"","132","51","92","132","51","92","Fully Covered","YES","NO","01_04_2009"
+
+Line 861315
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"RAJASTHAN","UDAIPUR","SALUMBAR","DAGAR","DAGAR","LAMBIDUNGARI "A" JETIYA FALA","0","845","0","0","724","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 861316
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"RAJASTHAN","UDAIPUR","SALUMBAR","DAGAR","DAGAR","LAMBIDUNGARI "B"","0","817","0","0","700","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 861398
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"RAJASTHAN","UDAIPUR","SALUMBAR","MANPUR "A"","MANPUR (A)","MANPUR "A"","0","311","26","0","200","26","Partially Covered","NO","YES","01_04_2009"
+
+Line 861399
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","SALUMBAR","MANPUR "A"","MANPUR (A)","BHOJAT","0","305","0","0","200","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 861400
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","SALUMBAR","MANPUR "A"","MANPUR (A)","TITODIA","0","306","0","0","200","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 861401
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","SALUMBAR","MANPUR "A"","MANPUR (A)","ODA FALA","0","506","0","0","506","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 861402
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","SALUMBAR","MANPUR "A"","MANPUR (A)","KALIYA FALA SCHOOL","9","497","1","9","400","1","Partially Covered","NO","YES","01_04_2009"
+
+Line 861403
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","SALUMBAR","MANPUR "A"","MANPUR (A)","HOLI FALA","0","368","0","0","300","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 861404
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","SALUMBAR","MANPUR "A"","MANPUR (A)","CHHANI FALA","0","314","0","0","314","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 861405
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","SALUMBAR","MANPUR "A"","MANPUR (A)","GARANIYA","0","101","0","0","101","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 861406
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","SALUMBAR","MANPUR "A"","MANPUR (A)","TORANIYA","0","106","0","0","106","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 861407
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","SALUMBAR","MANPUR "A"","MANPUR (A)","TIBBA KHEDIA","0","432","0","0","300","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 861408
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","SALUMBAR","MANPUR "A"","MANPUR (A)","HANDIA FALA","0","440","0","0","300","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 861409
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","SALUMBAR","MANPUR "A"","BORA-TALAB","BADA TALAB","0","74","70","0","20","50","Partially Covered","NO","YES","01_04_2009"
+
+Line 861410
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","SALUMBAR","MANPUR "A"","BORA-TALAB","NAL FALA","0","226","0","0","100","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 861411
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","SALUMBAR","MANPUR "A"","BORA-TALAB","BARAJA","0","118","0","0","118","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 861412
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","SALUMBAR","MANPUR "A"","BORA-TALAB","BHABHARA","0","339","0","0","250","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 861452
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"RAJASTHAN","UDAIPUR","SALUMBAR","BUDEL","MANPUR (B)","MANPUR "B"","1","270","10","1","200","8","Partially Covered","NO","YES","01_04_2009"
+
+Line 862885
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"RAJASTHAN","UDAIPUR","DHARIAWAD","CHITTODIYA","AMBA "A"","AAMBA "A"","1","121","0","1","121","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 862886
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"RAJASTHAN","UDAIPUR","DHARIAWAD","CHITTODIYA","AMBA "B"","AAMBA "B"","0","218","0","0","218","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 866259
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"RAJASTHAN","UDAIPUR","KHERWARA","DABAYCHA","MALIPHALA","MALI FALA "B"","0","279","0","0","130","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 866546
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"RAJASTHAN","UDAIPUR","KHERWARA","KHANDI OVRI","MUNDWARA","MUNDWARA "A"","31","477","18","0","0","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 866547
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"RAJASTHAN","UDAIPUR","KHERWARA","KHANDI OVRI","MUNDWARA (B)","MUNDWARA "B"","0","822","1","0","822","1","Fully Covered","NO","YES","01_04_2009"
+
+Line 866627
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"RAJASTHAN","UDAIPUR","KHERWARA","KOJAWARA","PAREDA CHAK NO. 1","PAREDA CHAK  "B"","0","309","0","0","150","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 866659
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"RAJASTHAN","UDAIPUR","KHERWARA","LARATHI","LARATHI","LARATHI "B"","0","342","0","0","0","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 866686
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"RAJASTHAN","UDAIPUR","KHERWARA","MAHUWAL","MAHUWAL","MAHUWAL "A"","0","726","0","0","0","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 866688
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"RAJASTHAN","UDAIPUR","KHERWARA","MAHUWAL","MAHUWAL (B)","MAHUWAL "B"","0","769","0","0","769","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 866809
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"RAJASTHAN","UDAIPUR","KHERWARA","PIPLI "A"","PEEPLI (A)","PIPLI "A"","0","1144","148","0","0","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 866810
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","KHERWARA","PIPLI "A"","PEEPLI (A)","PANDRI","0","95","0","0","95","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 866811
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","KHERWARA","PIPLI "A"","PEEPLI (A)","KHAMLALA","0","122","0","0","122","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 866812
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","KHERWARA","PIPLI "A"","PEEPLI (A)","SODA FALA","0","195","0","0","0","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 866813
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","KHERWARA","PIPLI "A"","PEEPLI (A)","LIMDAKUDI","0","293","0","0","293","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 866814
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","KHERWARA","PIPLI "A"","PEEPLI (A)","CHIT ROAD","0","195","0","0","0","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 866815
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","KHERWARA","PIPLI "A"","PEEPLI (A)","KALIA BAVSI","0","232","0","0","160","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 866816
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","KHERWARA","PIPLI "A"","PEEPLI (A)","CHIKLA GHATI","0","201","0","0","201","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 866817
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","KHERWARA","PIPLI "A"","PEEPLI (A)","MENDLA FALA","0","427","0","0","427","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 866818
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","KHERWARA","PIPLI "A"","MAKARJAPA","MAKADJAPA","0","366","122","0","366","122","Fully Covered","NO","YES","01_04_2009"
+
+Line 866819
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","KHERWARA","PIPLI "A"","MAKARJAPA","KOPCHA","0","256","0","0","256","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 866820
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","KHERWARA","PIPLI "A"","MAKARJAPA","MAHUDARA","0","195","0","0","90","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 866821
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","KHERWARA","PIPLI "A"","MAKARJAPA","NICHLA FALA","0","183","0","0","85","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 866822
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","KHERWARA","PIPLI "A"","KALALIYAKAD","KALALIYA KAD","0","218","1","0","218","1","Fully Covered","NO","YES","01_04_2009"
+
+Line 866823
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","KHERWARA","PIPLI "A"","KALALIYAKAD","AADI WASI BASTI","0","122","0","0","60","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 866824
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","KHERWARA","PIPLI "A"","KALALIYAKAD","KAD FALA","0","52","0","0","52","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 866849
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"RAJASTHAN","UDAIPUR","KHERWARA","PIPLI "B"","PEEPLI (B)","PIPLI "B"","162","754","183","162","754","183","Fully Covered","NO","YES","01_04_2009"
+
+Line 866850
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","KHERWARA","PIPLI "B"","PEEPLI (B)","ALAWAT FALA","0","683","0","0","683","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 866851
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","KHERWARA","PIPLI "B"","PEEPLI (B)","KHEDAT FALA","0","598","0","0","598","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 866852
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","KHERWARA","PIPLI "B"","PEEPLI (B)","BEDA GHATI FALA","0","842","0","0","842","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 866853
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"RAJASTHAN","UDAIPUR","KHERWARA","PIPLI "B"","PEEPLI (B)","BAV FALA","0","604","0","0","300","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 866906
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"RAJASTHAN","UDAIPUR","KHERWARA","SULAI","KELAWARA (A)","KELAWARA "A"","31","381","10","31","381","10","Fully Covered","NO","YES","01_04_2009"
+
+Line 896983
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"SIKKIM","WEST","SORENG","SAMDONG","SRIBADAM","SRIBADAM"A"-1","20","90","143","20","90","143","Fully Covered","NO","NO","01_04_2009"
+
+Line 896984
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"SIKKIM","WEST","SORENG","SAMDONG","SRIBADAM","SRIBADAM"A"-2","18","79","143","7","33","60","Partially Covered","NO","NO","01_04_2009"
+
+Line 896985
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"SIKKIM","WEST","SORENG","SAMDONG","SRIBADAM","SRIBADAM"B"-1","23","100","153","23","100","153","Fully Covered","NO","NO","01_04_2009"
+
+Line 896986
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"SIKKIM","WEST","SORENG","SAMDONG","SRIBADAM","SRIBADAM"B"-2","20","91","169","8","23","35","Partially Covered","NO","NO","01_04_2009"
+
+Line 910283
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"TAMIL NADU","DINDIGUL","THOPPAMPATTI","KOTHAYAM","KOTHAYAM","KOTHAYAM " H" COLONY","150","0","0","150","0","0","Fully Covered","YES","NO","01_04_2009"
+
+Line 913185
+  - Mixed single/double quotes
+"TAMIL NADU","ERODE","SATHYAMANGALAM","UKKARAM","UKKARAM","KUPPAN DURAI 'H'","226","0","9","226","0","9","Fully Covered","YES","NO","01_04_2009"
+
+Line 932255
+  - Mixed single/double quotes
+"TAMIL NADU","ARIYALUR","JAYAKOMDAM","GANGAI KONDA CHOLAPURAM","GANGAI KONDA CHOLAPURAM","'X' ROAD","0","0","100","0","0","53","Partially Covered","NO","NO","01_04_2009"
+
+Line 981556
+  - Mixed single/double quotes
+"TRIPURA","WEST TRIPURA","JAMPAIJALA","UJAN PATHALIAGHAT","INDRA KUMAR PARA","LALU CHOWDHURY PARA'","49","239","0","35","201","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 984319
+  - Mixed single/double quotes
+"TRIPURA","SOUTH TRIPURA","BAGAFA","ABANGCHARA","CHALAFRU MOG PARA","BURBADHAN PARA'","0","60","0","0","60","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 984485
+  - Mixed single/double quotes
+"TRIPURA","SOUTH TRIPURA","RAJNAGAR","INDIRANAGAR","KAMALPUR(SOUTH)","SARKAR PARA'","69","0","42","69","0","42","Fully Covered","YES","NO","01_04_2009"
+
+Line 986967
+  - Odd quote count (9)
+"UTTAR PRADESH","SAHARANPUR","SARSAWAN","DHIKKA KALAN","TABRA
+
+Line 986968
+  - Field 0 contains stray "
+  - Field 0 ends with literal "
+  - Odd quote count (23)
+TABRA MUST.","TABRA MUST.","0","0","354","0","0","354","Fully Covered","NO","NO","01_04_2009"
+
+Line 992887
+  - Odd quote count (11)
+"UTTAR PRADESH","MORADABAD","BAHJOI","DHAKARI NIKAT BAHJOI","DHAKARI NIKAT BAHJOI","
+
+Line 992888
+  - Field 0 contains stray "
+  - Field 0 ends with literal "
+  - Odd quote count (21)
+MADEIYA","337","0","244","337","0","244","Fully Covered","YES","NO","01_04_2009"
+
+Line 1067292
+  - Odd quote count (11)
+"UTTAR PRADESH","JALAUN","KUTHOND","NAVAREJPUR","MAO KANAR","MAO KANAR
+
+Line 1067293
+  - Field 0 contains stray "
+  - Field 0 ends with literal "
+  - Odd quote count (21)
+MAO KANAR","213","0","185","213","0","185","Fully Covered","YES","NO","01_04_2009"
+
+Line 1179555
+  - Odd quote count (11)
+"UTTAR PRADESH","KUSHI NAGAR","SUKRAULI","VAIRIA","JOLAHPUR","
+
+Line 1179556
+  - Field 0 contains stray "
+  - Field 0 ends with literal "
+  - Odd quote count (21)
+JOLAHPUR","292","0","486","292","0","486","Fully Covered","NO","NO","01_04_2009"
+
+Line 1206229
+  - Mixed single/double quotes
+"UTTAR PRADESH","BALLIA","DUBHAD","DUBHARH","DUBHARH","DUBHAR `S'","264","0","1897","264","0","1897","Fully Covered","NO","NO","01_04_2009"
+
+Line 1229289
+  - Mixed single/double quotes
+"UTTAR PRADESH","CHANDAULI","CHAHANIYA","MUHAMMADPUR","MUHAMMADPUR","YADAVA BASTI H4'","0","0","224","0","0","224","Fully Covered","NO","NO","01_04_2009"
+
+Line 1248533
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"WEST BENGAL","JALPAIGURI","MAL","KUMLAI","NIPUCHHAPUR","NIPUCHAPUR T.G. BLOCK "B"","158","254","185","158","254","185","Fully Covered","NO","YES","01_04_2009"
+
+Line 1248552
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"WEST BENGAL","JALPAIGURI","MAL","KUMLAI","NEORANADI TEA GARDEN","NEORANADI TEA GARDEN "B" DIVN","224","1809","209","224","1809","209","Fully Covered","NO","YES","01_04_2009"
+
+Line 1248601
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"WEST BENGAL","JALPAIGURI","MAL","CHENGMARI","JOGESH CHANDRA TEA GARDEN","JOGESH CHANDRA TEA GARDEN BLOCK "B"","120","1001","280","120","1001","280","Fully Covered","NO","YES","01_04_2009"
+
+Line 1248602
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"WEST BENGAL","JALPAIGURI","MAL","CHENGMARI","JOGESH CHANDRA TEA GARDEN","JOGESH CHANDRA TEA GARDEN BLOCK "C"","124","1039","289","124","1039","289","Fully Covered","NO","YES","01_04_2009"
+
+Line 1248743
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"WEST BENGAL","JALPAIGURI","MAL","BAGRAKOTE","ELLENBURY TEA GARDEN","WASHABARI TEA GARDEN  BLOCK "B"","236","470","352","236","470","352","Fully Covered","NO","YES","01_04_2009"
+
+Line 1248744
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"WEST BENGAL","JALPAIGURI","MAL","BAGRAKOTE","ELLENBURY TEA GARDEN","WASHABARI TEA GARDEN  BLOCK "A"","67","134","100","67","134","100","Fully Covered","NO","YES","01_04_2009"
+
+Line 1248746
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"WEST BENGAL","JALPAIGURI","MAL","BAGRAKOTE","ELLENBURY TEA GARDEN","WASHABARI TEA GARDEN   BLOCK "C"","40","84","64","40","84","64","Fully Covered","NO","YES","01_04_2009"
+
+Line 1259322
+  - Odd quote count (11)
+"WEST BENGAL","DAKSHIN DINAJPUR","GANGARAMPUR","BASURIA","BELASTHALI","JOSHIPARA
+
+Line 1259324
+  - Field 0 contains stray "
+  - Field 0 ends with literal "
+  - Odd quote count (21)
+JOSHI PARA","1","0","291","1","0","291","Fully Covered","NO","NO","01_04_2009"
+
+Line 1277386
+  - Odd quote count (11)
+"WEST BENGAL","BARDDHAMAN","BURDWAN - II","NABASTHA-I","CHAKUNDI","CHAKANDI
+
+Line 1277387
+  - Field 0 contains stray "
+  - Field 0 ends with literal "
+  - Odd quote count (21)
+CHAKANDI MUCHI PARA","217","0","0","217","0","0","Fully Covered","YES","NO","01_04_2009"
+
+Line 1397958
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"CHATTISGARH","DANTEWADA","SUKMA","KOYABEKUR","CHIKPAL","PATEL PARA "1"","0","131","0","0","60","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 1397960
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"CHATTISGARH","DANTEWADA","SUKMA","KOYABEKUR","CHIKPAL","PATEL PARA "2"","0","117","0","0","117","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 1397966
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"CHATTISGARH","DANTEWADA","SUKMA","PONGABHEJI","SIRSATTI","TUMID PARA "1"","0","292","0","0","200","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 1397967
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"CHATTISGARH","DANTEWADA","SUKMA","PONGABHEJI","SIRSATTI","TUMID PARA"2"","0","67","0","0","0","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 1399826
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"CHATTISGARH","RAIGARH","DHARAMJAIGARH","JAMARGI D","JAMARGI "D"","JAMARGI D","12","503","177","10","203","77","Partially Covered","NO","YES","01_04_2009"
+
+Line 1399827
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"CHATTISGARH","RAIGARH","DHARAMJAIGARH","JAMARGI D","JAMARGI "D"","SUKWASIPARA","9","36","145","4","16","45","Partially Covered","NO","NO","01_04_2009"
+
+Line 1399828
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"CHATTISGARH","RAIGARH","DHARAMJAIGARH","JAMARGI D","JAMARGI "D"","KANTADAND","13","150","37","5","50","7","Partially Covered","NO","YES","01_04_2009"
+
+Line 1399829
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"CHATTISGARH","RAIGARH","DHARAMJAIGARH","JAMARGI D","JAMARGI "D"","NAWADIH","14","97","102","10","47","52","Partially Covered","NO","YES","01_04_2009"
+
+Line 1399830
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"CHATTISGARH","RAIGARH","DHARAMJAIGARH","JAMARGI D","JAMARGI "D"","KOKRADAND","2","215","24","2","65","10","Partially Covered","NO","YES","01_04_2009"
+
+Line 1399831
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"CHATTISGARH","RAIGARH","DHARAMJAIGARH","JAMARGI D","JAMARGI "D"","GHATAPARA","0","54","12","0","20","2","Partially Covered","NO","YES","01_04_2009"
+
+Line 1399832
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"CHATTISGARH","RAIGARH","DHARAMJAIGARH","JAMARGI D","JAMARGI "D"","MAHKULPARA","4","41","100","4","20","20","Partially Covered","NO","NO","01_04_2009"
+
+Line 1399833
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"CHATTISGARH","RAIGARH","DHARAMJAIGARH","JAMARGI D","JAMARGI "D"","URAONPARA","0","51","0","0","51","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 1399939
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"CHATTISGARH","RAIGARH","LAILUNGA","BHEDIMUDA","BHENDIMUDA "B"","BHEDIMUDA","65","522","170","38","284","96","Partially Covered","NO","YES","01_04_2009"
+
+Line 1399940
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"CHATTISGARH","RAIGARH","LAILUNGA","BHEDIMUDA","BHENDIMUDA "B"","CHIKMIKI PARA","26","300","256","10","146","198","Partially Covered","NO","YES","01_04_2009"
+
+Line 1400318
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"CHATTISGARH","RAIGARH","LAILUNGA","KERABHAR","BHEDIMUDA "B"","BHEDIMUDA","0","625","337","0","375","210","Partially Covered","NO","YES","01_04_2009"
+
+Line 1400319
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"CHATTISGARH","RAIGARH","LAILUNGA","KERABHAR","BHEDIMUDA "B"","DEEPA PARA","0","300","0","0","159","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 1400320
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"CHATTISGARH","RAIGARH","LAILUNGA","KERABHAR","BHEDIMUDA "B"","INDIRA AAWAS","35","13","4","35","13","4","Fully Covered","YES","NO","01_04_2009"
+
+Line 1400321
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"CHATTISGARH","RAIGARH","LAILUNGA","KERABHAR","BHEDIMUDA "B"","MOUHARI PARA","21","9","20","21","9","20","Fully Covered","YES","NO","01_04_2009"
+
+Line 1402119
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","MALDA "A"","MALDA","MAINBASTI","1104","16","677","900","10","600","Partially Covered","YES","NO","01_04_2009"
+
+Line 1402120
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","MALDA "A"","REDA","MAIN BASTI","48","12","355","43","9","343","Partially Covered","NO","NO","01_04_2009"
+
+Line 1402149
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","KAPISDA "A"","KASPISDA"A"","MAINBASTI","425","5","818","400","0","750","Partially Covered","NO","NO","01_04_2009"
+
+Line 1402150
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","KAPISDA "A"","KASPISDA"A"","NAWAPARA","80","0","100","80","0","100","Fully Covered","YES","NO","01_04_2009"
+
+Line 1402151
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","KAPISDA "A"","KASPISDA"A"","LEWAPARA","75","0","95","62","0","88","Partially Covered","YES","NO","01_04_2009"
+
+Line 1402183
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","BATAUOPALI "A"","BATAUPALI (A)","MAINBASTI","700","0","200","690","0","185","Partially Covered","YES","NO","01_04_2009"
+
+Line 1402184
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","BATAUOPALI "A"","SEROLI","MAINBASTI","10","140","544","4","100","530","Partially Covered","NO","NO","01_04_2009"
+
+Line 1402234
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","KAPISDA "B"","KAPISDA","MAINBASTI","550","207","983","440","194","850","Partially Covered","NO","NO","01_04_2009"
+
+Line 1402235
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","KAPISDA "B"","KAPISDA","AAKHIRIBASTI PARA","30","20","30","30","20","30","Fully Covered","NO","NO","01_04_2009"
+
+Line 1402236
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","KAPISDA "B"","THAKURPALI","MAINBASTI","52","17","247","40","9","235","Partially Covered","NO","NO","01_04_2009"
+
+Line 1402237
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","KAPISDA "B"","THAKURPALI","DIPAPARA","80","10","10","80","10","10","Fully Covered","YES","NO","01_04_2009"
+
+Line 1402281
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","PARSKOL","PARASKOL "B"","MAINBASTI","166","0","597","152","0","565","Partially Covered","NO","NO","01_04_2009"
+
+Line 1402282
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","PARSKOL","PARASKOL "B"","BICHBASTI","20","0","110","20","0","110","Fully Covered","NO","NO","01_04_2009"
+
+Line 1402338
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","AMLIPALI "A"","AMALIPALI (B)","MAINBASTI","90","100","656","78","75","648","Partially Covered","NO","NO","01_04_2009"
+
+Line 1402339
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","AMLIPALI "A"","AMALIPALI (B)","NAWAPARA","19","96","105","19","80","90","Partially Covered","NO","YES","01_04_2009"
+
+Line 1402340
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","AMLIPALI "A"","BARBHATA","MAINBASTI","188","180","557","88","96","278","Partially Covered","NO","NO","01_04_2009"
+
+Line 1402439
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","MALDA "B"","MALDA"A"","MAINBASTI","215","218","635","195","200","615","Partially Covered","NO","NO","01_04_2009"
+
+Line 1402440
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","MALDA "B"","MALDA"A"","DIPAPARA","60","150","70","20","100","30","Partially Covered","NO","YES","01_04_2009"
+
+Line 1402441
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","MALDA "B"","DEWASAR","MAINBASTI","0","0","11","0","0","5","Partially Covered","NO","NO","01_04_2009"
+
+Line 1402442
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","MALDA "B"","DEWASAR","BICH BASTI","0","0","18","0","0","18","Fully Covered","NO","NO","01_04_2009"
+
+Line 1402469
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","BATAUPALI "B"","BATAUPALI (B)","MAINBASTI","26","55","169","26","55","100","Partially Covered","NO","NO","01_04_2009"
+
+Line 1402470
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","BATAUPALI "B"","BATAUPALI (B)","DIPAPRA","45","84","81","45","70","60","Partially Covered","NO","YES","01_04_2009"
+
+Line 1402471
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","BATAUPALI "B"","TILAIPALI","MAINBASTI","23","6","80","23","6","50","Partially Covered","NO","NO","01_04_2009"
+
+Line 1402472
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","BATAUPALI "B"","TILAIPALI","DIPAPARA","10","8","32","10","8","32","Fully Covered","NO","NO","01_04_2009"
+
+Line 1402473
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","BATAUPALI "B"","TANGAR","MAINBASTI","0","35","387","0","35","250","Partially Covered","NO","NO","01_04_2009"
+
+Line 1402474
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","BATAUPALI "B"","AAMAKONI","MAINBASTI","0","35","101","0","35","90","Partially Covered","NO","NO","01_04_2009"
+
+Line 1402475
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","BATAUPALI "B"","AAMAKONI","DIPAPARA","0","0","35","0","0","35","Fully Covered","NO","NO","01_04_2009"
+
+Line 1402476
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","BATAUPALI "B"","AAMAKONI","SIDARPARA","0","8","32","0","8","32","Fully Covered","NO","NO","01_04_2009"
+
+Line 1402528
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","AMLIPALI "B"","AMALIPALI "A"","MAINBASTI","110","233","115","92","200","94","Partially Covered","NO","YES","01_04_2009"
+
+Line 1402529
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","AMLIPALI "B"","AMALIPALI "A"","DIPAPARA","50","70","50","10","70","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 1402530
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","AMLIPALI "B"","AMALIPALI "A"","SAMLAI MANDIR","60","20","40","20","20","10","Partially Covered","YES","NO","01_04_2009"
+
+Line 1402531
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","AMLIPALI "B"","SENDHMAL","MAIN BASTI","0","21","30","0","15","20","Partially Covered","NO","YES","01_04_2009"
+
+Line 1402532
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","AMLIPALI "B"","CHINGARIPALI","MAINBASTI","0","35","25","0","35","25","Fully Covered","NO","YES","01_04_2009"
+
+Line 1402533
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","AMLIPALI "B"","CHINGARIPALI","DIPAPARA","23","0","7","23","0","7","Fully Covered","YES","NO","01_04_2009"
+
+Line 1402534
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","AMLIPALI "B"","PAKARDIH","MAIN BASTI","4","20","138","4","20","102","Partially Covered","NO","NO","01_04_2009"
+
+Line 1402535
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","AMLIPALI "B"","PAKARDIH","DIPAPARA","40","100","10","40","70","10","Partially Covered","NO","YES","01_04_2009"
+
+Line 1402536
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","AMLIPALI "B"","TENDUWA","TENDUA","33","75","84","20","50","70","Partially Covered","NO","NO","01_04_2009"
+
+Line 1402537
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","SARANGARH","AMLIPALI "B"","TENDUWA","DIPAPARA","30","50","20","15","20","10","Partially Covered","NO","YES","01_04_2009"
+
+Line 1402803
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","BARAMKELA","KATANGPALI "B"","KANTHANGPALI","MAINBASTI","359","129","210","35","90","150","Partially Covered","YES","NO","01_04_2009"
+
+Line 1402804
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","BARAMKELA","KATANGPALI "B"","KANTHANGPALI","MAJRA","62","103","80","35","65","52","Partially Covered","NO","YES","01_04_2009"
+
+Line 1402805
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","BARAMKELA","KATANGPALI "B"","BAGHANPUR","MAINBASTI","89","81","334","55","45","220","Partially Covered","NO","NO","01_04_2009"
+
+Line 1402806
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","BARAMKELA","KATANGPALI "B"","BARADAWAN","MAINBASTI","3","59","105","3","40","55","Partially Covered","NO","NO","01_04_2009"
+
+Line 1402807
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","BARAMKELA","KATANGPALI "B"","BARADAWAN","PHULJHARIYAPARA","0","10","45","0","10","45","Fully Covered","NO","NO","01_04_2009"
+
+Line 1402808
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","BARAMKELA","KATANGPALI "B"","BARADAWAN","DIPAPARA","0","12","46","0","12","46","Fully Covered","NO","NO","01_04_2009"
+
+Line 1402809
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","BARAMKELA","KATANGPALI "B"","BARADAWAN","BASTIPARA","0","0","60","0","0","60","Fully Covered","NO","NO","01_04_2009"
+
+Line 1402810
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","BARAMKELA","KATANGPALI "B"","TERADAWAN","MAINBASTI","8","17","80","8","10","30","Partially Covered","NO","NO","01_04_2009"
+
+Line 1402811
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","BARAMKELA","KATANGPALI "B"","DHONGRIPALI","MAINBASTI","290","102","294","250","90","250","Partially Covered","YES","NO","01_04_2009"
+
+Line 1402812
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","BARAMKELA","KATANGPALI "B"","DHONGRIPALI","TALABPARA","9","38","38","9","38","38","Fully Covered","NO","YES","01_04_2009"
+
+Line 1402855
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","BARAMKELA","BILAIGARH "B"","BILAIGARH","MAINBASTI","78","214","500","52","152","400","Partially Covered","NO","NO","01_04_2009"
+
+Line 1402856
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","BARAMKELA","BILAIGARH "B"","KANTHJORI","MAINBASTI","0","45","74","0","45","74","Fully Covered","NO","NO","01_04_2009"
+
+Line 1402857
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","BARAMKELA","BILAIGARH "B"","KANTHJORI","BHURUPARA","40","5","55","20","5","20","Partially Covered","YES","NO","01_04_2009"
+
+Line 1402858
+  - Contains ""
+  - Field 3 contains stray "
+  - Field 3 ends with literal "
+"CHATTISGARH","RAIGARH","BARAMKELA","BILAIGARH "B"","PIPARKHUTA","MAINBASTI","37","52","193","20","30","99","Partially Covered","NO","NO","01_04_2009"
+
+Line 1444452
+  - Mixed single/double quotes
+"JHARKHAND","LATEHAR","BALUMATH","NAGRA","MARANGLOIYA","'URAWN TOLA","71","133","5","71","133","5","Fully Covered","NO","YES","01_04_2009"
+
+Line 1478996
+  - Mixed single/double quotes
+"JHARKHAND","JAMTARA","JAMTARA","PANJANIYAN","PANJANIYA","UPPER TOLA'","0","110","0","0","110","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 1543485
+  - Odd quote count (11)
+"UTTARAKHAND","GARHWAL","JAIRIKHAL","BARHGAON","BAD GAON","TALLA BARHGAON
+
+Line 1543486
+  - Field 0 contains stray "
+  - Field 0 ends with literal "
+  - Odd quote count (21)
+TALA BARHGAON","0","0","46","0","0","46","Fully Covered","NO","NO","01_04_2009"
+
+Line 1554969
+  - Odd quote count (11)
+"UTTARAKHAND","NAINITAL","OKHALKANDA","DIGOLI","VAGAUR","JANAULA
+
+Line 1554970
+  - Field 0 contains stray "
+  - Field 0 ends with literal "
+  - Odd quote count (21)
+JANAULA","0","0","48","0","0","0","Partially Covered","NO","NO","01_04_2009"
+
+Line 1556288
+  - Odd quote count (11)
+"UTTARAKHAND","UDHAM SINGH NAGAR","GADARPUR","KULHA","KULHA","MATHPURI
+
+Line 1556289
+  - Field 0 contains stray "
+  - Field 0 ends with literal "
+  - Odd quote count (21)
+MATHPURI","112","336","672","112","336","672","Fully Covered","NO","NO","01_04_2009"
+
+Line 1556343
+  - Odd quote count (11)
+"UTTARAKHAND","UDHAM SINGH NAGAR","GADARPUR","JHAGARPURI","MAJRAHASAN","MAJRAHASAN
+
+Line 1556344
+  - Field 0 contains stray "
+  - Field 0 ends with literal "
+  - Odd quote count (21)
+MAJRAHASAN","0","356","92","0","356","92","Fully Covered","NO","YES","01_04_2009"
+
+Line 1556672
+  - Odd quote count (11)
+"UTTARAKHAND","UDHAM SINGH NAGAR","SITARGANJ","SISAIYA","KANTHGRI","MANJEET FARM
+
+Line 1556673
+  - Field 0 contains stray "
+  - Field 0 ends with literal "
+  - Odd quote count (21)
+MANJEET FARM","0","0","133","0","0","133","Fully Covered","NO","NO","01_04_2009"
+
+Line 1556803
+  - Odd quote count (11)
+"UTTARAKHAND","UDHAM SINGH NAGAR","SITARGANJ","SIDHANAVADIYA","SIDHANAVADIYA","MOHMAD GANJ
+
+Line 1556804
+  - Field 0 contains stray "
+  - Field 0 ends with literal "
+  - Odd quote count (21)
+MOHMAD GANJ","6","0","96","6","0","96","Fully Covered","NO","NO","01_04_2009"
+
+Line 1556815
+  - Odd quote count (11)
+"UTTARAKHAND","UDHAM SINGH NAGAR","SITARGANJ","LALRKHAS","MIRABARA RANA","MEERABARA RANA
+
+Line 1556816
+  - Field 0 contains stray "
+  - Field 0 ends with literal "
+  - Odd quote count (21)
+MEERABARA RANA","46","1","180","46","1","180","Fully Covered","NO","NO","01_04_2009"
+
+Line 1573259
+  - Contains ""
+"KARNATAKA","BANGALORE RURAL","DEVANHALLI","JALIGE ","JALIGE ","","287","0","118","287","0","118","Fully Covered","YES","NO","01_04_2009"
+
+Line 1573266
+  - Contains ""
+"HARYANA","REWARI","JATUSANA","MUSEPUR","MUSEPUR","","0","0","7","0","0","7","Fully Covered","NO","NO","01_04_2009"
+
+Line 1573267
+  - Contains ""
+"HARYANA","REWARI","JATUSANA","MUSEPUR","MUSEPUR","","0","0","1","0","0","1","Fully Covered","NO","NO","01_04_2009"
+
+Line 1576307
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"HARYANA","JHAJJAR ","Beri","MAJRA-D (BHIMNA) MAJRA-DUBALDHAN","MAJRA-D","MAJRA "D"","1190","0","8225","1190","0","8225","Fully Covered","NO","NO","01_04_2009"
+
+Line 1589574
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"KARNATAKA","GULBARGA","CHITTAPUR","HALKATTA","HALKATTA","GURUJI "N" TANDA","170","0","0","120","0","0","Partially Covered","YES","NO","01_04_2009"
+
+Line 1589611
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"KARNATAKA","GULBARGA","CHITTAPUR","PETHSIROOR","BENNUR (B)","BENNUR "B" TANDA","51","0","0","51","0","0","Fully Covered","YES","NO","01_04_2009"
+
+Line 1592115
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"NAGALAND","DIMAPUR","DHANSIRIPAR","DHN","Keyavi "A" & "B"","Keyavi "A" & "B"","0","1014","0","0","1014","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 1592121
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"NAGALAND","DIMAPUR","MEDZIPHEMA","MED","New Chumukedima "B" Khel","New Chumukedima "B" Khel","0","1380","0","0","0","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 1592144
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"NAGALAND","ZUNHEBOTO","ATOIZU","ATOIZU","Naghuto "C"","Naghuto "C"","0","198","0","0","0","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 1592162
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"NAGALAND","DIMAPUR","MEDZIPHEMA","MED","Purana Bazar "A"","Purana Bazar "A"","0","4114","2239","0","0","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 1592163
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"NAGALAND","DIMAPUR","MEDZIPHEMA","MED","Purana Bazar "B"","Purana Bazar "B"","0","282","9","0","0","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 1592164
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"NAGALAND","DIMAPUR","MEDZIPHEMA","MED","Seitekema "C"","Seitekema "C"","0","392","1259","0","0","0","Partially Covered","NO","NO","01_04_2009"
+
+Line 1592168
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"NAGALAND","DIMAPUR","MEDZIPHEMA","MED","Bamunpukhri "B"","Bamunpukhri "B"","0","196","186","0","196","186","Partially Covered","NO","YES","01_04_2009"
+
+Line 1592181
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"NAGALAND","KIPHIRE","SHAMATOR","SMTR","Sukiur "A"","Sukiur (A)","0","860","0","0","860","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 1592442
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"NAGALAND","PEREN","JALUKIE","JLK","Kiyevi "A"","Kiyevi "A"","0","60","0","0","60","0","Fully Covered","NO","YES","01_04_2009"
+
+Line 1592443
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"NAGALAND","PEREN","JALUKIE","JLK","Kiyevi "B"","Kiyevi "B"","0","825","0","0","0","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 1596167
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"KARNATAKA","GULBARGA","ALAND","GOLA(B)","GOLA(B)","GOLA "B" TANDA","171","0","0","120","0","0","Partially Covered","YES","NO","01_04_2009"
+
+Line 1599718
+  - Mixed single/double quotes
+"ORISSA","BALANGIR","AGALPUR","NAGAON'B'","Santika","NEW PADA","0","107","36","0","36","0","Partially Covered","NO","YES","01_04_2009"
+
+Line 1600451
+  - Contains ""
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+  - Odd quote count (33)
+"MANIPUR","IMPHAL WEST","IMPHAL WEST - I","KHURKHUL","SEKMAI",""    NINGTHOUBA LEIKAI","177","0","288","177","0","288","Fully Covered","NO","NO","01_04_2009"
+
+Line 1616237
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+"KARNATAKA","YADGIR","SHORAPUR","HEBBAL(B)","SIDDAPUR "B"","VALUMIKI NAGAR (K)","0","356","104","0","245","62","Partially Covered","NO","YES","01_04_2009"
+
+Line 1616243
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"KARNATAKA","YADGIR","SHORAPUR","MUDNOOR(K)","MUDNOOR(B)","MADNOOR "B" CAMP","88","0","278","88","0","278","Fully Covered","NO","NO","01_04_2009"
+
+Line 1616246
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"KARNATAKA","YADGIR","SHORAPUR","AGNI","HANDRAL (J)","HANDRAL "J" CAMP","0","0","124","0","0","124","Fully Covered","NO","NO","01_04_2009"
+
+Line 1651369
+  - Contains ""
+  - Field 6 contains stray "
+  - Field 6 ends with literal "
+  - Odd quote count (33)
+"MAHARASHTRA","SOLAPUR","SANGOLA","AJANALE","AJANALE",""LADE UTTAM YELPALE WASTI, LADE","0","0","393","0","0","0","Partially Covered","NO","NO","01_04_2009"
+
+Line 1652765
+  - Contains ""
+"MAHARASHTRA","KOLHAPUR","BHUDARGAD","SONARWADI","SONARWADI","","292","0","1446","292","0","1446","Fully Covered","NO","NO","01_04_2009"
+
+Line 1657179
+  - Contains ""
+  - Field 4 contains stray "
+  - Field 4 ends with literal "
+  - Field 5 contains stray "
+  - Field 5 ends with literal "
+"MADHYA PRADESH","NARSINGHPUR","GOTEGAON","JHOT","MAWAI "A"","MAWAI "A"","7","30","56","3","5","42","Partially Covered","NO","NO","01_04_2009"

@@ -1,0 +1,28 @@
+outredenv/
+__pycache__/
+*.pyc
+*.pyo
+t/
+results/*.parquet
+.env
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# Data files (large, should not be in git)
+t/
+results/
+*.csv
+*.parquet
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# OS
+.DS_Store
