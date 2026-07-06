@@ -1,0 +1,45 @@
+# ─────────────────────────────────────────────────────────
+# Outred — Nginx Reverse Proxy Configuration
+#
+# Usage:
+#   1. Copy this file to /etc/nginx/sites-available/outred
+#   2. Replace outred.yourplatform.com with your subdomain
+#   3. Replace 127.0.0.1:8000 with your container address
+#   4. sudo ln -s /etc/nginx/sites-available/outred /etc/nginx/sites-enabled/
+#   5. sudo nginx -t && sudo systemctl reload nginx
+#   6. (Optional) Add SSL via: sudo certbot --nginx -d outred.yourplatform.com
+#
+# CRITICAL: Without client_max_body_size, nginx defaults to 1 MB
+# and ALL uploads > 1 MB will fail with HTTP 413.
+# ─────────────────────────────────────────────────────────
+
+server {
+    listen 80;
+    server_name outred.yourplatform.com;
+
+    # ── Upload size limit ────────────────────────────────
+    # Must be >= the app's MAX_UPLOAD_BYTES (default 1 GB).
+    # Set slightly above to avoid edge-case mismatches.
+    client_max_body_size 1100m;
+
+    # ── Timeouts ─────────────────────────────────────────
+    # Large CSV files can take 10-30 minutes to process.
+    proxy_read_timeout    1800s;   # 30 minutes
+    proxy_send_timeout    1800s;
+    proxy_connect_timeout 60s;
+
+    # ── Proxy to Outred container ────────────────────────
+    location / {
+        proxy_pass http://127.0.0.1:8000;
+
+        # Standard proxy headers
+        proxy_set_header Host              $host;
+        proxy_set_header X-Real-IP         $remote_addr;
+        proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        # Disable request buffering so large uploads stream
+        # directly to the app without nginx writing a temp file.
+        proxy_request_buffering off;
+    }
+}

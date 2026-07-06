@@ -76,6 +76,7 @@ class TestProfiler:
 
 import os
 import tempfile
+import numpy as np
 import polars as pl
 import pytest
 from outred.profiler import profile_dataframe
@@ -130,6 +131,7 @@ class TestSkewnessThreshold:
         # route to lof under the new rules.
         from outred.router.dispatcher import _choose_algorithm
         from outred.profiler import DataProfile
+        from outred.config import OutredConfig
 
         # Mimic creditcard.csv's profile: skew=2.11, small file, <50 dims
         profile = DataProfile(
@@ -150,7 +152,8 @@ class TestSkewnessThreshold:
             max_dimensionality=30,
             stats_are_sampled=True,
         )
-        algo = _choose_algorithm(profile)
+        config = OutredConfig()
+        algo = _choose_algorithm(profile, config)
         assert algo == "iforest", (
             f"skewness=2.11 should route to iforest (not lof)  - "
             f"got {algo}. The old 2.0 threshold was empirically disproven "
@@ -160,6 +163,7 @@ class TestSkewnessThreshold:
     def test_high_skewness_still_routes_lof(self):
         from outred.router.dispatcher import _choose_algorithm
         from outred.profiler import DataProfile
+        from outred.config import OutredConfig
 
         profile = DataProfile(
             file_path="fake.csv",
@@ -179,7 +183,8 @@ class TestSkewnessThreshold:
             max_dimensionality=5,
             stats_are_sampled=True,
         )
-        algo = _choose_algorithm(profile)
+        config = OutredConfig()
+        algo = _choose_algorithm(profile, config)
         assert algo == "lof"
 
 

@@ -349,6 +349,57 @@ def run_ocsvm(df: pl.DataFrame, config: OutredConfig) -> pl.DataFrame:
     return run_pyod_model(df, OCSVM(contamination=config.contamination), config)
 
 
+def run_ensemble(df: pl.DataFrame, config: OutredConfig) -> pl.DataFrame:
+    """
+    Legacy single-DataFrame ensemble: fit IForest + HBOS + LOF, average
+    their normalised scores, and flag the top `contamination` fraction.
+    For testing and backward compatibility only -- the main pipeline
+    uses fit_global_ensemble + score_chunk_ensemble instead.
+    """
+    X, col_names = prepare_matrix(
+        df, scaling=config.scaling, impute_strategy=config.impute,
+        exclude=config.exclude_columns,
+        numeric_cast_threshold=config.numeric_cast_threshold,
+    )
+    default = df.with_columns([
+        pl.lit(0.0).alias("anomaly_score"),
+        pl.lit(False).alias("is_outlier"),
+    ])
+    if X.shape[1] == 0 or X.shape[0] < 2:
+        return default
+
+    from pyod.models.iforest import IForest
+    from pyod.models.hbos import HBOS
+    from pyod.models.lof import LOF
+    n_neighbors = min(20, max(2, X.shape[0] - 1))
+    candidates = [
+        ("IForest", IForest(contamination=config.contamination, random_state=42)),
+        ("HBOS",    HBOS(contamination=config.contamination)),
+        ("LOF",     LOF(contamination=config.contamination, n_neighbors=n_neighbors)),
+    ]
+
+    all_normed = []
+    for name, m in candidates:
+        try:
+            m.fit(X)
+            raw = m.decision_function(X)
+            lo, hi = float(raw.min()), float(raw.max())
+            normed = (raw - lo) / (hi - lo) if hi != lo else np.zeros_like(raw)
+            all_normed.append(normed)
+        except Exception:
+            pass
+
+    if not all_normed:
+        return default
+
+    avg = np.mean(all_normed, axis=0)
+    threshold = float(np.percentile(avg, 100.0 * (1.0 - config.contamination)))
+    return df.with_columns([
+        pl.Series("anomaly_score", _normalise_scores(avg)),
+        pl.Series("is_outlier", avg >= threshold),
+    ])
+
+
 # Legacy name → runner map (kept for backward compat only)
 _RUNNERS = {
     "iforest": run_iforest,
@@ -356,6 +407,7 @@ _RUNNERS = {
     "lof": run_lof,
     "cblof": run_cblof,
     "ocsvm": run_ocsvm,
+    "ensemble": run_ensemble,
 }
 
 

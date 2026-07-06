@@ -14,7 +14,6 @@
 #      less accurate on large/sorted files).
 
 import os
-import sys
 import random
 from collections import Counter
 from dataclasses import dataclass, field, replace
@@ -253,8 +252,7 @@ def dispatch_batch(
             sample = pl.read_csv(file_path, n_rows=sample_n, infer_schema_length=0,
                                  encoding='latin1')
     except Exception:
-        print("Error: CSV file has no data rows.")
-        sys.exit(1)
+        raise ValueError("CSV file has no data rows or could not be parsed.")
 
     true_row_count = count_csv_data_rows(file_path)
 

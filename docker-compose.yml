@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  outred:
+    build: .
+    ports:
+      - "${PORT:-8000}:${PORT:-8000}"
+    environment:
+      - PORT=${PORT:-8000}
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 2G      # Minimum for files up to 500 MB
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:${PORT:-8000}/api/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s

@@ -1,3 +1,6 @@
+outredenv/
+.venv/
+venv/
 t/
 results/
 __pycache__/

@@ -101,7 +101,7 @@ class TestAnalyzeEndpoint:
 
             for f in ex["top_features"]:
                 assert "feature" in f
-                assert "shap_value" in f
+                assert "value" in f
                 assert "actual_value" in f
                 assert "median_value" in f
 
