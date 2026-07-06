@@ -12,11 +12,8 @@ import polars as pl
 import numpy as np
 from typing import Optional, Tuple, List
 
-from pyod.models.iforest import IForest
-from pyod.models.hbos import HBOS
-from pyod.models.lof import LOF
-from pyod.models.cblof import CBLOF
-from pyod.models.ocsvm import OCSVM
+# PyOD models are imported lazily inside build_model() and fit_global_ensemble()
+# to avoid loading all model classes at server startup (~30-50 MB saved at idle).
 
 from outred.config import OutredConfig
 from outred.preprocessing import prepare_matrix
@@ -58,19 +55,26 @@ def build_model(algo: str, config: OutredConfig, n_rows: int):
     """
     Construct an unfitted PyOD model for the given algorithm.
     n_rows is used to bound n_neighbors / n_clusters safely.
+    PyOD models are imported lazily here so they are only loaded into memory
+    when a request actually triggers detection.
     """
     if algo == "iforest":
+        from pyod.models.iforest import IForest
         return IForest(contamination=config.contamination, random_state=42)
     if algo == "hbos":
+        from pyod.models.hbos import HBOS
         return HBOS(contamination=config.contamination)
     if algo == "lof":
+        from pyod.models.lof import LOF
         n_neighbors = min(20, max(2, n_rows - 1))
         return LOF(contamination=config.contamination, n_neighbors=n_neighbors)
     if algo == "cblof":
+        from pyod.models.cblof import CBLOF
         n_clusters = min(8, max(2, n_rows // 50))
         return CBLOF(contamination=config.contamination, n_clusters=n_clusters,
                      random_state=42)
     if algo == "ocsvm":
+        from pyod.models.ocsvm import OCSVM
         return OCSVM(contamination=config.contamination)
     raise ValueError(f"Unknown algorithm: {algo}. Valid: iforest, hbos, lof, cblof, ocsvm")
 
@@ -202,6 +206,9 @@ def fit_global_ensemble(
     if X.shape[1] == 0 or X.shape[0] < 2:
         return None, 0.0, 0.0, 0.0
 
+    from pyod.models.iforest import IForest
+    from pyod.models.hbos import HBOS
+    from pyod.models.lof import LOF
     n_neighbors = min(20, max(2, X.shape[0] - 1))
     candidates = [
         ("IForest", IForest(contamination=config.contamination, random_state=42)),
@@ -320,20 +327,25 @@ def run_pyod_model(df: pl.DataFrame, model, config: OutredConfig) -> pl.DataFram
 
 
 def run_iforest(df: pl.DataFrame, config: OutredConfig) -> pl.DataFrame:
+    from pyod.models.iforest import IForest
     return run_pyod_model(df, IForest(contamination=config.contamination, random_state=42), config)
 
 def run_hbos(df: pl.DataFrame, config: OutredConfig) -> pl.DataFrame:
+    from pyod.models.hbos import HBOS
     return run_pyod_model(df, HBOS(contamination=config.contamination), config)
 
 def run_lof(df: pl.DataFrame, config: OutredConfig) -> pl.DataFrame:
+    from pyod.models.lof import LOF
     n = min(20, max(2, df.height - 1))
     return run_pyod_model(df, LOF(contamination=config.contamination, n_neighbors=n), config)
 
 def run_cblof(df: pl.DataFrame, config: OutredConfig) -> pl.DataFrame:
+    from pyod.models.cblof import CBLOF
     n = min(8, max(2, df.height // 50))
     return run_pyod_model(df, CBLOF(contamination=config.contamination, n_clusters=n, random_state=42), config)
 
 def run_ocsvm(df: pl.DataFrame, config: OutredConfig) -> pl.DataFrame:
+    from pyod.models.ocsvm import OCSVM
     return run_pyod_model(df, OCSVM(contamination=config.contamination), config)
 
 

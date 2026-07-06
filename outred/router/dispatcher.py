@@ -89,27 +89,34 @@ def _reservoir_sample(
 
     This is O(N) in time and O(k) in memory -- suitable for files too large
     to fit in RAM.  The returned DataFrame has the same schema as the CSV.
+
+    Memory note: instead of converting chunks to Python dicts (5-10x overhead),
+    we track selected row indices and accumulate matching Polars DataFrame slices.
+    All data stays in Polars' efficient columnar Arrow memory throughout.
     """
     from outred.ingestion.chunker import stream_csv
 
-    reservoir: List[dict] = []
+    # reservoir_rows: list of single-row Polars DataFrames (stays in Arrow memory)
+    reservoir_rows: List[pl.DataFrame] = []
     n_seen = 0
 
     for chunk in stream_csv(file_path, chunk_size):
-        rows = chunk.to_dicts()
-        for row in rows:
+        chunk_len = len(chunk)
+        for local_i in range(chunk_len):
             n_seen += 1
-            if len(reservoir) < k:
-                reservoir.append(row)
+            if len(reservoir_rows) < k:
+                # Reservoir not yet full — always accept
+                reservoir_rows.append(chunk.slice(local_i, 1))
             else:
+                # Randomly decide whether to replace an existing slot
                 j = random.randint(0, n_seen - 1)
                 if j < k:
-                    reservoir[j] = row
+                    reservoir_rows[j] = chunk.slice(local_i, 1)
 
-    if not reservoir:
+    if not reservoir_rows:
         return pl.DataFrame()
 
-    return pl.from_dicts(reservoir)
+    return pl.concat(reservoir_rows, rechunk=True)
 
 
 # ---------------------------------------------------------------------------
