@@ -13,6 +13,7 @@
 #      the profiling sample's value_counts are used as a proxy (faster, but
 #      less accurate on large/sorted files).
 
+import logging
 import os
 import random
 from collections import Counter
@@ -20,6 +21,8 @@ from dataclasses import dataclass, field, replace
 from typing import Iterator, List, Dict, Optional
 
 import polars as pl
+
+logger = logging.getLogger(__name__)
 
 from outred.config import OutredConfig
 from outred.profiler import profile_dataframe, DataProfile
@@ -264,15 +267,15 @@ def dispatch_batch(
 
     # Merge profiler-detected ID columns into exclude list
     if profile.id_columns:
-        print(f"  [Profiler] Excluding detected ID column(s): {profile.id_columns}")
+        logger.info("Excluding detected ID column(s): %s", profile.id_columns)
     config = _merge_id_columns_into_exclude(config, profile)
 
     # -----------------------------------------------------------
     # 2. Datetime check -- time series is V2
     # -----------------------------------------------------------
     if profile.datetime_columns:
-        print(f"  [Time Series] Datetime columns detected: {profile.datetime_columns}")
-        print("  Time series anomaly detection is planned for V2 -- passing data through unchanged.")
+        logger.info("Datetime columns detected: %s", profile.datetime_columns)
+        logger.info("Time series anomaly detection is planned for V2 -- passing data through unchanged.")
         for chunk in stream_csv(file_path, config.chunk_size):
             yield ChunkResult(
                 chunk=chunk.with_columns([
@@ -291,23 +294,21 @@ def dispatch_batch(
     algo = config.algorithm
     if algo == "auto":
         algo = _choose_algorithm(profile, config)
-        print(f"  [Smart Router] Auto-selected algorithm: {algo}")
-        print(f"    Rows={profile.total_rows:,} (sampled {profile.sample_rows:,} for stats)  "
+        logger.info("Smart Router auto-selected algorithm: %s", algo)
+        logger.info("    Rows=%s (sampled %s for stats)  "
               f"Dims={profile.max_dimensionality}  "
               f"Skew={profile.avg_skewness:.2f} (sample-estimated)  "
               f"Size={profile.file_size_mb:.1f}MB  "
               f"Quality={profile.data_quality_score}/100")
     else:
-        print(f"  [Router] Using user-selected algorithm: {algo}")
+        logger.info("Using user-selected algorithm: %s", algo)
 
     if profile.max_dimensionality == 0:
-        print()
-        print("  WARNING: No usable numeric features found in this dataset.")
-        print("           Numeric outlier detection will produce all-zero scores.")
-        print("           Only categorical (rare-value) detection will be active.")
+        logger.warning("No usable numeric features found in this dataset.")
+        logger.warning("Numeric outlier detection will produce all-zero scores.")
+        logger.warning("Only categorical (rare-value) detection will be active.")
         if profile.categorical_columns:
-            print(f"           Categorical columns found: {profile.categorical_columns[:10]}")
-        print()
+            logger.info("Categorical columns found: %s", profile.categorical_columns[:10])
 
     # -----------------------------------------------------------
     # 4. Run pipeline
@@ -338,23 +339,23 @@ def _batch_pipeline(
     from outred.ingestion.chunker import stream_csv
 
     # --- Pass 0a: Draw global reservoir sample and fit numeric model ----------
-    print(f"  [Global Model] Sampling {config.global_sample_rows:,} rows for model fitting...")
+    logger.info("Sampling %s rows for model fitting...", f"{config.global_sample_rows:,}")
     global_sample = _reservoir_sample(file_path, config.global_sample_rows, config.chunk_size)
 
     if len(global_sample) == 0:
-        print("  Warning: Reservoir sample is empty. Falling back to profiler sample.")
+        logger.warning("Reservoir sample is empty. Falling back to profiler sample.")
         global_sample = profiler_sample
 
     if algo == "ensemble":
-        print(f"  [Global Model] Fitting ensemble (IForest + HBOS + LOF) on {len(global_sample):,} rows...")
+        logger.info("Fitting ensemble (IForest + HBOS + LOF) on %s rows...", f"{len(global_sample):,}")
         fitted_models, threshold, g_lo, g_hi = fit_global_ensemble(global_sample, config)
-        print(f"  [Global Model] Ensemble ready. Decision threshold={threshold:.4f}")
+        logger.info("Ensemble ready. Decision threshold=%.4f", threshold)
     else:
-        print(f"  [Global Model] Fitting {algo} on {len(global_sample):,} rows...")
+        logger.info("Fitting %s on %s rows...", algo, f"{len(global_sample):,}")
         fitted_model, threshold, g_lo, g_hi = fit_global_model(global_sample, algo, config)
         fitted_models = None  # sentinel -- using single model path
-        print(f"  [Global Model] Model ready. Decision threshold={threshold:.4f}  "
-              f"Score range=[{g_lo:.4f}, {g_hi:.4f}]")
+        logger.info("Model ready. Decision threshold=%.4f  Score range=[%.4f, %.4f]",
+                     threshold, g_lo, g_hi)
 
     # --- Pass 0b: Build global categorical frequency maps --------------------
     # Identify categorical columns from the sample (after casting)
@@ -365,23 +366,23 @@ def _batch_pipeline(
     global_freq_maps: Optional[Dict[str, Dict[str, float]]] = None
 
     if not cat_cols:
-        print("  [Categorical] No categorical columns found -- skipping frequency pre-pass.")
+        logger.info("No categorical columns found -- skipping frequency pre-pass.")
     elif config.cat_freq_mode == "two-pass":
-        print(f"  [Categorical] Two-pass mode: building global frequency maps for "
-              f"{len(cat_cols)} column(s)...")
+        logger.info("Two-pass mode: building global frequency maps for %d column(s)...",
+                     len(cat_cols))
         global_freq_maps = _build_global_freq_maps(
             file_path, cat_cols, config.chunk_size,
             config.cat_max_cardinality_ratio, config.cat_min_cardinality,
         )
-        print(f"  [Categorical] Global maps built for {len(global_freq_maps)} column(s).")
+        logger.info("Global maps built for %d column(s).", len(global_freq_maps))
     else:
         # single-pass: use the profiler sample's counts as a proxy
-        print(f"  [Categorical] Single-pass mode: using profiler sample for frequency estimates.")
+        logger.info("Single-pass mode: using profiler sample for frequency estimates.")
         global_freq_maps = _build_sample_freq_maps(
             profiler_sample, cat_cols,
             config.cat_max_cardinality_ratio, config.cat_min_cardinality,
         )
-        print(f"  [Categorical] Sample-based maps built for {len(global_freq_maps)} column(s).")
+        logger.info("Sample-based maps built for %d column(s).", len(global_freq_maps))
 
     # --- Pass 1: Stream, score, yield ----------------------------------------
     for chunk in stream_csv(file_path, config.chunk_size):
@@ -431,7 +432,7 @@ def _incremental_pipeline(
     )
 
     # Pass 1: Train incrementally
-    print("  [Incremental] Pass 1/2: Training model incrementally...")
+    logger.info("[Incremental] Pass 1/2: Training model incrementally...")
     for chunk in stream_csv(file_path, config.chunk_size):
         detector.partial_fit(chunk)
 
@@ -460,7 +461,7 @@ def _incremental_pipeline(
             )
 
     # Pass 2: Score and yield
-    print("  [Incremental] Pass 2/2: Scoring chunks...")
+    logger.info("[Incremental] Pass 2/2: Scoring chunks...")
     for chunk in stream_csv(file_path, config.chunk_size):
         result = detector.predict(chunk)
         result = detect_categorical_outliers(
@@ -473,7 +474,7 @@ def _incremental_pipeline(
 
         explanations: List[dict] = []
         if config.explain and "is_outlier" in result.columns:
-            print("  Note: --explain is not yet supported for the incremental engine.")
+            logger.info("--explain is not yet supported for the incremental engine.")
 
         yield ChunkResult(chunk=result, explanations=explanations)
 
@@ -536,7 +537,7 @@ def _attach_explanations(
 
         model = _build_model_for_explanation(algo, config, X.shape[0])
         if model is None:
-            print(f"  Note: --explain not supported for algorithm='{algo}'; skipping.")
+            logger.info("--explain not supported for algorithm='%s'; skipping.", algo)
             return []
 
         model.fit(X)
@@ -560,10 +561,10 @@ def _attach_explanations(
                     parts.append(f"{name}={actual} ({ratio:.1f}x median)")
                 else:
                     parts.append(f"{name}={actual}")
-            print(f"    Row {row_idx} [{method}]: {', '.join(parts)}")
+            logger.info("    Row %d [%s]: %s", row_idx, method, ", ".join(parts))
 
         return explanations
 
     except Exception as e:
-        print(f"  Warning: Could not generate explanations: {e}")
+        logger.warning("Could not generate explanations: %s", e)
         return []

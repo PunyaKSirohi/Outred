@@ -1,15 +1,20 @@
 # outred/engines/incremental.py
 # Out-of-core outlier detection for datasets that don't fit in memory.
 # Uses SGDOneClassSVM with true incremental partial_fit.
+#
+# All sklearn imports are lazy (inside methods) to avoid loading ~80 MB
+# of sklearn submodules at server startup when this engine is not used.
 
-import polars as pl
-import numpy as np
-from sklearn.linear_model import SGDOneClassSVM
-from sklearn.preprocessing import StandardScaler
-from sklearn.kernel_approximation import Nystroem
-from sklearn.feature_extraction import FeatureHasher
+import logging
 from typing import Optional, List
+
+import numpy as np
+import polars as pl
+
 from outred.preprocessing import select_numeric_columns, select_categorical_columns
+
+logger = logging.getLogger(__name__)
+
 
 class IncrementalOutlierDetector:
     """
@@ -22,22 +27,16 @@ class IncrementalOutlierDetector:
                  exclude_columns: Optional[List[str]] = None):
         self.nu = nu
         self.n_components = n_components
+        self.n_features = n_features
 
-        # Incremental scaler for numeric columns
-        self.scaler = StandardScaler()
-
-        # Kernel approximation for non-linearity
-        self.nystroem = Nystroem(n_components=n_components, random_state=42)
-
-        # The core SVM model
-        self.svm = SGDOneClassSVM(nu=nu, random_state=42)
-
-        # Categorical encoder (hashing trick  - no need to see all categories upfront)
-        self.hasher = FeatureHasher(n_features=n_features, input_type='dict')
+        # Models are initialised lazily on first partial_fit call
+        self.scaler = None
+        self.nystroem = None
+        self.svm = None
+        self.hasher = None
 
         self.is_fitted = False
         self.nystroem_fitted = False
-        self.n_features = n_features
 
         # FIX: previously this engine ignored config.exclude_columns entirely,
         # meaning detected ID columns (e.g. a sequential 'id' field) leaked
@@ -46,11 +45,27 @@ class IncrementalOutlierDetector:
         # measured impact of this class of bug.
         self.exclude_columns = exclude_columns or []
 
+    def _ensure_models(self):
+        """Lazily import sklearn and initialise models on first use."""
+        if self.scaler is not None:
+            return
+        from sklearn.linear_model import SGDOneClassSVM
+        from sklearn.preprocessing import StandardScaler
+        from sklearn.kernel_approximation import Nystroem
+        from sklearn.feature_extraction import FeatureHasher
+
+        self.scaler = StandardScaler()
+        self.nystroem = Nystroem(n_components=self.n_components, random_state=42)
+        self.svm = SGDOneClassSVM(nu=self.nu, random_state=42)
+        self.hasher = FeatureHasher(n_features=self.n_features, input_type='dict')
+
     def _prepare_features(self, df: pl.DataFrame) -> np.ndarray:
         """
         Combines numeric (scaled) + categorical (hashed) features into one array.
         Uses the shared column-selection helpers from preprocessing.
         """
+        self._ensure_models()
+
         numeric_cols = select_numeric_columns(df, exclude=self.exclude_columns)
         cat_cols = select_categorical_columns(df, exclude=self.exclude_columns)
 
@@ -74,7 +89,7 @@ class IncrementalOutlierDetector:
                     if p1[j] < p99[j]:
                         X_num[:, j] = np.clip(X_num[:, j], p1[j], p99[j])
             parts.append(X_num)
-            
+
         # Categorical part via hashing trick
         if cat_cols:
             records = [

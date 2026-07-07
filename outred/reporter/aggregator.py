@@ -2,10 +2,12 @@
 # Collects scored chunks and writes the final Parquet output.
 # Uses streaming PyArrow ParquetWriter to keep memory flat.
 
+import logging
 import time
-import sys
 from pathlib import Path
 from typing import Optional, Dict, Any, List
+
+logger = logging.getLogger(__name__)
 
 import polars as pl
 import pyarrow as pa
@@ -72,26 +74,34 @@ class ReportAggregator:
         elapsed = round(time.time() - self.start_time, 2)
 
         if self.total_rows == 0:
-            print("  Warning: No data was processed.")
+            logger.warning("No data was processed.")
             return self._summary_dict(elapsed)
 
         combined_pct = round((self.total_combined_outliers / self.total_rows) * 100, 2)
         numeric_pct = round((self.total_numeric_outliers / self.total_rows) * 100, 2)
         cat_pct = round((self.total_cat_outliers / self.total_rows) * 100, 2)
 
-        print(f"""
-    +------------------------------------------+
-    |          OUTRED -- SCAN COMPLETE          |
-    +------------------------------------------+
-    |  Rows scanned        : {self.total_rows:>14,}   |
-    |  Numeric outliers    : {self.total_numeric_outliers:>9,} ({numeric_pct}%)  |
-    |  Categorical outliers: {self.total_cat_outliers:>9,} ({cat_pct}%)  |
-    |  Combined outliers   : {self.total_combined_outliers:>9,} ({combined_pct}%)  |
-    |  Chunks processed    : {self.chunks_processed:>14,}   |
-    |  Runtime             : {elapsed:>12}s   |
-    |  Output saved        : {self.output_path:<18} |
-    +------------------------------------------+
-        """)
+        logger.info(
+            "\n"
+            "    +------------------------------------------+\n"
+            "    |          OUTRED -- SCAN COMPLETE          |\n"
+            "    +------------------------------------------+\n"
+            "    |  Rows scanned        : %14s   |\n"
+            "    |  Numeric outliers    : %9s (%s%%)  |\n"
+            "    |  Categorical outliers: %9s (%s%%)  |\n"
+            "    |  Combined outliers   : %9s (%s%%)  |\n"
+            "    |  Chunks processed    : %14s   |\n"
+            "    |  Runtime             : %12ss   |\n"
+            "    |  Output saved        : %-18s |\n"
+            "    +------------------------------------------+",
+            f"{self.total_rows:,}",
+            f"{self.total_numeric_outliers:,}", numeric_pct,
+            f"{self.total_cat_outliers:,}", cat_pct,
+            f"{self.total_combined_outliers:,}", combined_pct,
+            f"{self.chunks_processed:,}",
+            elapsed,
+            self.output_path,
+        )
 
         return self._summary_dict(elapsed)
 

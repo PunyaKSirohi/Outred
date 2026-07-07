@@ -2,12 +2,14 @@
 # FastAPI web server for Outred  - ephemeral processing, rate limiting,
 # and serving the web frontend.
 
+import logging
 import os
-import sys
 import tempfile
 import time
 from pathlib import Path
 from typing import Optional
+
+logger = logging.getLogger(__name__)
 
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException, Request
 from fastapi.responses import JSONResponse, FileResponse
@@ -51,10 +53,11 @@ async def _rate_limit_handler(request: Request, exc: RateLimitExceeded):
     )
 
 
-# CORS  - allow the frontend served from the same origin
+# CORS  - configurable via CORS_ORIGINS env var (comma-separated)
+_cors_origins = os.environ.get("CORS_ORIGINS", "*").split(",")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[o.strip() for o in _cors_origins],
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -64,8 +67,9 @@ _static_dir = Path(__file__).parent / "outred" / "static"
 if _static_dir.exists():
     app.mount("/static", StaticFiles(directory=str(_static_dir)), name="static")
 
-# Max upload size in bytes (1 GB)
-MAX_UPLOAD_BYTES = 1024 * 1024 * 1024
+# Max upload size — configurable via MAX_UPLOAD_MB env var (default: 1024 MB = 1 GB)
+_max_upload_mb = int(os.environ.get("MAX_UPLOAD_MB", "1024"))
+MAX_UPLOAD_BYTES = _max_upload_mb * 1024 * 1024
 
 
 # ---------------------------------------------------------------------------
@@ -130,7 +134,7 @@ async def profile_endpoint(request: Request, file: UploadFile = File(...)):
             total += len(chunk)
             if total > MAX_UPLOAD_BYTES:
                 tmp.close()
-                raise HTTPException(413, "File too large. Maximum is 1 GB.")
+                raise HTTPException(413, f"File too large. Maximum size is {_max_upload_mb} MB.")
             tmp.write(chunk)
         tmp.close()
 
@@ -197,7 +201,7 @@ async def analyze_endpoint(
             total += len(chunk)
             if total > MAX_UPLOAD_BYTES:
                 tmp_csv_f.close()
-                raise HTTPException(413, "File too large. Maximum is 1 GB.")
+                raise HTTPException(413, f"File too large. Maximum size is {_max_upload_mb} MB.")
             tmp_csv_f.write(chunk)
         tmp_csv_f.close()
 

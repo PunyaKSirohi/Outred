@@ -4,14 +4,13 @@
 
 import csv
 import os
-import sys
 from dataclasses import dataclass, field
 from typing import List
 
 
 @dataclass
 class ValidationIssue:
-    """A single structural issue found on one line of a CSV file."""
+    #A single structural issue found on one line of a CSV file.
     line_number: int
     issue_type: str
     description: str

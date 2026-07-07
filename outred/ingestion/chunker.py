@@ -1,9 +1,12 @@
 # outred/ingestion/chunker.py
 
-import polars as pl
+import logging
 import os
-import sys
 from typing import Iterator
+
+import polars as pl
+
+logger = logging.getLogger(__name__)
 
 
 class CSVError(ValueError):
@@ -19,22 +22,22 @@ def validate_file(file_path: str):
     # Validates if the file exists, is readable, and is a CSV.
     if not os.path.exists(file_path):
         msg = f"File not found: '{file_path}'"
-        print(f"Error: {msg}")
+        logger.error(msg)
         raise CSVError(msg)
 
     if not os.access(file_path, os.R_OK):
         msg = f"File is not readable: '{file_path}'"
-        print(f"Error: {msg}")
+        logger.error(msg)
         raise CSVError(msg)
 
     if not file_path.lower().endswith(".csv"):
         msg = f"Only CSV files are supported. Got: '{file_path}'"
-        print(f"Error: {msg}")
+        logger.error(msg)
         raise CSVError(msg)
 
     if os.path.getsize(file_path) == 0:
         msg = f"File is empty: '{file_path}'"
-        print(f"Error: {msg}")
+        logger.error(msg)
         raise CSVError(msg)
 
 
@@ -103,7 +106,7 @@ def stream_csv(file_path: str, chunk_size: int = 100_000) -> Iterator[pl.DataFra
     """
     validate_file(file_path)
 
-    print(f" Starting to stream {file_path} in chunks of {chunk_size:,} rows...")
+    logger.info("Starting to stream %s in chunks of %s rows...", file_path, f"{chunk_size:,}")
 
     try:
         reader = _open_batched_reader(file_path, chunk_size)
@@ -114,7 +117,7 @@ def stream_csv(file_path: str, chunk_size: int = 100_000) -> Iterator[pl.DataFra
             f"Failed to open CSV for reading: {str(e)[:300]}. "
             f"Your CSV may contain malformed quoting or invalid encoding."
         )
-        print(f"\n  Error: {msg}\n")
+        logger.error(msg)
         raise CSVError(msg) from e
 
     chunk_count = 0
@@ -127,7 +130,7 @@ def stream_csv(file_path: str, chunk_size: int = 100_000) -> Iterator[pl.DataFra
                 f"CSV parsing failed at chunk {chunk_count + 1}: {str(e)[:300]}. "
                 f"Your CSV contains structural issues that prevent reliable parsing."
             )
-            print(f"\n  Error: {msg}\n")
+            logger.error(msg)
             raise CSVError(msg) from e
 
         if not batches:
@@ -144,14 +147,14 @@ def stream_csv(file_path: str, chunk_size: int = 100_000) -> Iterator[pl.DataFra
             null_cells = df.null_count().sum_horizontal()[0]
             null_pct = (null_cells / total_cells) * 100 if total_cells > 0 else 0
             if null_pct > 50:
-                print(f"Warning: Chunk {chunk_count + 1} is {null_pct:.1f}% null -- results may be unreliable.")
+                logger.warning("Chunk %d is %.1f%% null -- results may be unreliable.", chunk_count + 1, null_pct)
 
             chunk_count += 1
             yield df
 
     if chunk_count == 0:
         msg = "CSV file has no data rows."
-        print(f"Error: {msg}")
+        logger.error(msg)
         raise CSVError(msg)
 
-    print(f" Finished streaming. Processed {chunk_count} chunks.")
+    logger.info("Finished streaming. Processed %d chunks.", chunk_count)

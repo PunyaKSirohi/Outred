@@ -13,8 +13,16 @@ Why this file exists instead of a bare `uvicorn` CMD:
                      with an opaque error instead of a clean 413 from server.py.
 """
 
+import logging
 import os
 import uvicorn
+
+# Configure logging for the entire application
+logging.basicConfig(
+    level=os.environ.get("LOG_LEVEL", "INFO").upper(),
+    format="%(asctime)s  %(levelname)-8s  %(name)s  %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+)
 
 PORT = int(os.environ.get("PORT", 8000))
 

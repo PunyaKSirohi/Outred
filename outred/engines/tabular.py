@@ -8,9 +8,13 @@
 # This produces globally consistent scores and a stable decision boundary
 # instead of the per-chunk models that previously made scores incomparable.
 
+import logging
+
 import polars as pl
 import numpy as np
 from typing import Optional, Tuple, List
+
+logger = logging.getLogger(__name__)
 
 # PyOD models are imported lazily inside build_model() and fit_global_ensemble()
 # to avoid loading all model classes at server startup (~30-50 MB saved at idle).
@@ -118,7 +122,7 @@ def fit_global_model(
         model.fit(X)
         scores = model.decision_function(X)
     except Exception as e:
-        print(f"  Warning: Global model fit failed for {algo}: {e}")
+        logger.warning("Global model fit failed for %s: %s", algo, e)
         return None, 0.0, 0.0, 0.0
 
     global_lo = float(scores.min())
@@ -167,7 +171,7 @@ def score_chunk(
     try:
         scores = model.decision_function(X)
     except Exception as e:
-        print(f"  Warning: Scoring failed on chunk: {e}. Returning zero scores.")
+        logger.warning("Scoring failed on chunk: %s. Returning zero scores.", e)
         return default
 
     normalized = _normalise_scores(scores, global_lo, global_hi)
@@ -227,7 +231,7 @@ def fit_global_ensemble(
             all_normed.append(normed)
             fitted.append((name, m, lo, hi))
         except Exception as e:
-            print(f"  Warning: Ensemble member {name} failed on sample: {e} -- skipping.")
+            logger.warning("Ensemble member %s failed on sample: %s -- skipping.", name, e)
 
     if not fitted:
         return None, 0.0, 0.0, 0.0
@@ -278,7 +282,7 @@ def score_chunk_ensemble(
                 normed = np.zeros_like(raw)
             all_normed.append(np.clip(normed, 0.0, 1.0))
         except Exception as e:
-            print(f"  Warning: Ensemble member {name} failed on chunk: {e} -- skipping.")
+            logger.warning("Ensemble member %s failed on chunk: %s -- skipping.", name, e)
 
     if not all_normed:
         return default
@@ -318,7 +322,7 @@ def run_pyod_model(df: pl.DataFrame, model, config: OutredConfig) -> pl.DataFram
         scores = model.decision_function(X)
         labels = model.predict(X)
     except Exception as e:
-        print(f"  Warning: {type(model).__name__} failed: {e}")
+        logger.warning("%s failed: %s", type(model).__name__, e)
         return default
     return df.with_columns([
         pl.Series("anomaly_score", _normalise_scores(scores)),
