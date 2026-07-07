@@ -5,7 +5,7 @@ __pycache__/
 .pytest_cache/
 .env
 
-# Data files (large, should not be in git)
+# Data files (large)
 t/
 results/
 *.csv
